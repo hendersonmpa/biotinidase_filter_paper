@@ -1,0 +1,349 @@
+% Created 2021-12-09 Thu 10:39
+% Intended LaTeX compiler: pdflatex
+\documentclass[review]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{lineno}
+\linenumbers
+\usepackage{setspace}
+\onehalfspacing
+\authblk
+\usepackage{pdfpages}
+\usepackage{textpos}
+\usepackage[final]{draftwatermark}
+\usepackage{amsmath}
+\usepackage{chemfig}
+\setchemfig{atom style={scale=0.45}}
+\usepackage[]{mhchem}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={Matthew Henderson},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.2 (Org mode 9.5)}, 
+ pdflang={English}}
+\usepackage[notquote]{hanging}
+\begin{document}\makeatletter
+\newcommand{\citeprocitem}[2]{\hyper@linkstart{cite}{citeproc_bib_item_#1}#2\hyper@linkend}
+\makeatother
+
+
+
+\begin{frontmatter}
+\title{Collection of Dried Blood Spot Samples on Recently Printed Filter Paper Cards Inhibits Biotinidase Activity}
+\author[NSO]{Matthew P.A. Henderson\corref{cor1}}
+\ead{mhenders@cheo.on.ca}
+\author[NSO]{Nathan McIntosh}
+\author[NSO]{Amy Chambers}
+\author[NSO]{Emily Desmoreaux}
+\author[NSO]{Michael Kowalski}
+\author[NSO]{Jennifer Milburn}
+\author[NSO]{Pranesh Chakraborty}
+\address[NSO]{Newborn Screening Ontario, Children's Hospital of Eastern Ontario, 415 Smyth Rd, Ottawa Ontario}
+\cortext[cor1]{Corresponding author}
+\end{frontmatter}
+
+\section*{STARTED Abstract}
+\label{sec:org73e056a}
+\begin{description}
+\item[{Background}] From 2016 to 2017 the annual screen positive rate for
+biotinidase deficiency in Ontario more than doubled from
+2.65x10\textsuperscript{-4} to 6.57x10\textsuperscript{-4}.
+
+\item[{Methods}] A data mining approach was used to investigate the role
+of temperature, filter paper lot, and print run on the screen
+positive rate for biotinidase deficiency. The laboratory information
+system was queried for all biotinidase activity results for the
+period 2014-01-12 to 2018-09-27 (n = 678,354). During the study
+period biotinidase activity was measured on the SpotCheck Pro
+platform (Astoria Pacific, Oregon USA.) with results reported in
+microplate response units (MRU).
+
+\item[{Results}] Decomposition was used to separate seasonality from an
+underlying trend in the 4 year time series of biotindase activity
+results. This analysis revealed a marked seasonal effect (winter =
+mean + <= 16 MRU, summer = mean - <= 19 MRU) and a profound
+non-linear negative trend (max = 126.7 MRU, min = MRU). External
+temperature was correlated with biotinidase results (Pearson's r =
+0.79) but not with the observed negative trend (Pearson's r =
+-0.06). Time series analysis of biotinidase results grouped by print
+lot of filter paper revealed that recently printed filter paper
+cards exhibit a time dependent inhibition of biotinidase activity
+(observed in seven print lots over four years). This inhibition
+resolved in approximately 3 months (Lot A: mean result 0-3.5 months
+= 66.0 MRU, mean result 3-6 months = 90.3 MRU).
+
+\item[{Conclusions}] In Ontario, lots of filter paper collection cards are
+generally issued once a year. Due to operational changes in 2017
+four filter paper collection cards lots were issued. These new
+filter paper lots caused a pronounced negative trend in biotinidase
+activity leading to an increased biotinidase deficiency screen
+positive rate in 2017.
+\end{description}
+
+\section*{Keywords}
+\label{sec:orgc0d6044}
+Newborn Screening, Biotinidase Deficiency, Dried Blood Spots, Filter
+Paper, Seasonal Variation, Enzyme Activity
+\section*{{\bfseries\sffamily TODO} Introduction}
+\label{sec:org2cc3f38}
+\begin{itemize}
+\item Biotinidase deficiency is an autosomal recessive disorder of biotin
+recycling associated with secondary alterations in amino acid,
+carbohydrate, and fatty acid metabolism (Figure \ref{fig:org969d190}).
+
+\item Biotinidase and newborn screening
+\item Free biotin, whose primary source is the diet, is
+actively transported across the intestinal membrane and blood–brain
+barrier. This free biotin pool provides biotin to the various
+apocarboxylases (pyruvate carboxylase, acetyl-CoA carboxylase,
+propionyl-CoA carboxylase, and beta-methylcrotonyl-CoA
+carboxylase). Holocarboxylase synthetase assembles active
+holocarboxylases by covalently binding biotin to their active
+sites. The carboxylases are important for gluconeogenesis, fatty
+acid synthesis, and the catabolism of several branch-chain amino
+acids. Eventually, the holocarboxylases are degraded proteolytically
+to biocytin or small biotinyl-peptides. These compounds are further
+cleaved by biotinidase to produce lysine and free biotin, which can
+enter the free biotin pool, thereby recycling the vitamin. ACC,
+acetyl-CoA carboxylase; AMP, adenosine monophosphate; ATP, adenosine
+triphosphate; MCC, 3-methylcrotonyl carboxylase; PC, pyruvate
+carboxylase; PCC, propionyl-CoA carboxylase; PPi, inorganic
+pyrophosphate.
+\item Biotinidase deficiency is caused by absent or markedly deficient
+activity of biotinidase.
+
+\item Biotinidase is a cytosolic enzyme that liberates biotin from
+biocytin during the normal proteolytic turnover of holocarboxylases
+and other biotiny-lated proteins.
+
+\item Based on newborn screening outcome data from 2006, the incidence of
+profound biotinidase deficiency in the United States is estimated at
+1/80,000 births, and partial biotinidase deficiency between 1/31,000
+and 1/40,000 (\hyperlink{citeproc_bib_item_4}{Strovel et al. 2017}).
+
+\item Diagnosis of biotinidase deficiency is based on demonstrating
+deficient enzyme activity in serum or plasma
+
+\item Patients with profound biotinidase deficiency have less than 10\% of
+mean normal serum activity (\hyperlink{citeproc_bib_item_4}{Strovel et al. 2017}).
+
+\item Patients with partial biotinidase deficiency have 10-30\% of mean
+normal serum activity (\hyperlink{citeproc_bib_item_4}{Strovel et al. 2017}).
+\end{itemize}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\textwidth]{./figures/biot_cycle.png}
+\caption{\label{fig:org969d190}The Biotin Cycle (\hyperlink{citeproc_bib_item_4}{Strovel et al. 2017})}
+\end{figure}
+
+\section*{Material and Methods}
+\label{sec:org9eeeb96}
+A data mining approach was used to investigate the affect of
+temperature and filter paper lots on the screen positive rate for
+biotinidase deficiency. The laboratory information system was queried
+for all newborn screening biotinidase activity results from the first
+phase of screening for the period 2014-01-12 to 2019-07-27 (n =
+798,770). During the study period biotinidase activity was measured on
+the SpotCheck Pro platform (Astoria Pacific, Oregon USA.). Biotinidase
+activity was reported in microplate response units (MRU).
+
+Daily mean temperature data for weather station 42183 in Barrie
+Ontario was downloaded from Environment Canada. Time series
+decomposition was used to separate seasonality from an underlying
+trend in the 4 year time series of biotindase activity results.
+
+Whole blood samples were heat treated to reduce biotinidase
+activity. The heat treated whole blood was then mixed with untreated
+whole blood in a serial dilution to create a set of samples with a
+range of biotinidase activity. Biotinidase acitivty in these samples
+was measured after spotting onto filter paper lots w152, w161, w162
+and 171 and allowing to dry at room temperature overnight.
+
+The R language for statistical computing was used for all data
+analysis with extensive use of tidyverse packages for data
+manipulation, mcr deming regression, xts and tsa for time series
+analysis (\hyperlink{citeproc_bib_item_5}{Team 2020}; \hyperlink{citeproc_bib_item_6}{Wickham et al. 2019}; \hyperlink{citeproc_bib_item_2}{Fabian Model <fabian.model@roche.com> 2014}; \hyperlink{citeproc_bib_item_3}{Ryan and Ulrich 2020}; \hyperlink{citeproc_bib_item_1}{Chan and Ripley 2020}).
+
+\section*{{\bfseries\sffamily TODO} Results}
+\label{sec:org37d2752}
+\subsection*{Time Series Analysis}
+\label{sec:org25be887}
+Time series analysis was performed to examine trends in biotinidase
+and GALT activity measured for newborn screening over the four year
+study period. As expected both analytes demonstrate seasonal variation
+in measured activity (Figure \ref{fig:orge7a9de2} and \ref{fig:org571a718}). As a result
+the screen positive rate for biotinidase deficiency and galactosemia
+is increased in the summer months. However there is a period in early
+2017 during which the screen positive rate for biotinidase deficiency
+increases despite external temperatures below zero (Figure \ref{fig:orge7a9de2}
+between blue lines). There is no corresponding change in GALT screen
+positive rate during this time period (Figure \ref{fig:orge7a9de2}
+between blue lines). 
+
+% latex table generated in R 4.0.3 by xtable 1.8-4 package
+% Thu Dec  9 10:39:35 2021
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+year & n & median & pos & rate \\ 
+  \hline
+2014 & 140620 & 119.87 &  78 & 0.00055 \\ 
+  2015 & 140812 & 122.93 &  40 & 0.00028 \\ 
+  2016 & 143361 & 120.25 &  38 & 0.00027 \\ 
+  2017 & 144524 & 105.31 &  95 & 0.00066 \\ 
+  2018 & 146365 & 111.90 &  88 & 0.0006 \\ 
+  2019 & 83088 & 120.49 &  27 & 0.00032 \\ 
+   \hline
+\end{tabular}
+\caption{Yearly Biotinidase Screen Positive Rate} 
+\label{tab:biot_year}
+\end{table}
+
+% latex table generated in R 4.0.3 by xtable 1.8-4 package
+% Thu Dec  9 10:39:35 2021
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+year & n & median & pos & rate \\ 
+  \hline
+2014 & 140678 & 8.37 &  20 & 0.00014 \\ 
+  2015 & 140171 & 7.93 &  12 & 8.6e-05 \\ 
+  2016 & 143352 & 8.13 &  21 & 0.00015 \\ 
+  2017 & 143261 & 8.46 &  14 & 9.8e-05 \\ 
+  2018 & 143592 & 8.22 &  13 & 9.1e-05 \\ 
+  2019 & 82116 & 8.07 &   6 & 7.3e-05 \\ 
+   \hline
+\end{tabular}
+\caption{Yearly Galactosemia Screen Positive Rate} 
+\label{tab:galt_year}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./figures/biotpts.pdf}
+\caption{\label{fig:orge7a9de2}Time series of weekly screen positive biotinidase deficiency referrals, biotinidase activity and mean weekly temperature (\degree{}C)}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./figures/galtpts.pdf}
+\caption{\label{fig:org571a718}Time series of weekly screen positive galactosemia referrals, GALT activity and mean weekly temperature (\degree{}C)}
+\end{figure}
+
+\clearpage
+
+\subsection*{Seasonal Trend Decomposition}
+\label{sec:orgd02bc2b}
+Seasonal trend decomposition was used to identify trends in
+biotinidase activity after seasonal adjustment (Figure
+\ref{fig:org08ac55d}). Median weekly biotinidase activity revealed a marked
+seasonal effect with high activity in the winter (median + \(\le\) 17 MRU)
+and low activity in the summer (median - \(\le\) 20) in addtion to a
+profound non-linear negative trend (Figure \ref{fig:org08ac55d}). External
+temperature was correlated with biotinidase activity (Pearson's r =
+0.81) but not with the observed negative trend (Pearson's r = 0.004).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./figures/biotdecomp.pdf}
+\caption{\label{fig:org08ac55d}Decomposition of the median weekly biotinidiase activity time series into seasonal, random and trend components.}
+\end{figure}
+
+\clearpage
+
+\subsection*{Biotinidase active by Filter Paper Collection Card Lot}
+\label{sec:org3f50ff7}
+Time series analysis of median weekly biotinidase results grouped by
+filter paper lot revealed that filter paper cards exhibit a time
+dependent inhibition of biotinidase activity, observed in seven
+filter paper lots over four years (Figure \ref{fig:org1b9e7e1}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{./figures/biotform.pdf}
+\caption{\label{fig:org1b9e7e1}Median weekly biotinidase activity by filter paper collection card lot.}
+\end{figure}
+
+\clearpage
+
+\subsection*{Inhibition of Biotinidase Resolved After 2 Months}
+\label{sec:org9f553f5}
+Direct comparison of measured biotinidase activity for whole blood
+samples spotted onto a paper lot (w171) recently received from the
+printers with material in circulation shows a notable negative
+bias (Figure \ref{fig:orgee61564}). Inhibition of biotindase activity resolved after two months
+(Figures \ref{fig:org1b9e7e1} and \ref{fig:orgbc4c2bf}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./figures/spmat.pdf}
+\caption{\label{fig:orgee61564}Comparison of biotinidase activity in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0. linear regression- blue, line of identity- red}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./figures/demingw171.pdf}
+\caption{\label{fig:org6510321}Biotinidase Activity on Filter Paper Lot W152 v W171 with Deming Regression at Time 0.}
+\end{figure}
+\clearpage
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./figures/spmat2.pdf}
+\caption{\label{fig:orgbc4c2bf}Comparison of biotinidase activity in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0 + 2 months. linear regression- blue, line of identity- red}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./figures/demingw171_2.pdf}
+\caption{\label{fig:org5ce37a9}Biotinidase Filter Paper W152 v W117 Lot Comparison at Time 0 + 2 months.}
+\end{figure}
+
+\clearpage
+
+\section*{{\bfseries\sffamily TODO} Conclusions}
+\label{sec:org73d0702}
+
+\begin{itemize}
+\item In Ontario, new lots of filter paper collection cards are generally
+issued once a year. Due to operational changes in 2017 three filter
+paper collection cards lots were issued.
+\item These new filter paper lots caused a pronounced negative trend in
+biotinidase activity leading to an increased biotinidase deficiency
+screen positive rate in 2017.
+\end{itemize}
+
+\section*{References}
+\label{sec:org8b4f426}
+\begin{hangparas}{1.5em}{1}
+\hypertarget{citeproc_bib_item_1}{Chan, Kung-Sik, and Brian Ripley. 2020. \textit{TSA: Time Series Analysis}. \href{https://CRAN.R-project.org/package=TSA}{https://CRAN.R-project.org/package=TSA}.}
+
+\hypertarget{citeproc_bib_item_2}{Fabian Model <fabian.model@roche.com>, Ekaterina Manuilova Andre Schuetzenmeister <andre.schuetzenmeister@roche.com>. 2014. \textit{Mcr: Method Comparison Regression}. \href{https://CRAN.R-project.org/package=mcr}{https://CRAN.R-project.org/package=mcr}.}
+
+\hypertarget{citeproc_bib_item_3}{Ryan, Jeffrey A., and Joshua M. Ulrich. 2020. \textit{Xts: eXtensible Time Series}. \href{https://CRAN.R-project.org/package=xts}{https://CRAN.R-project.org/package=xts}.}
+
+\hypertarget{citeproc_bib_item_4}{Strovel, Erin T., Tina M. Cowan, Anna I. Scott, and Barry Wolf. 2017. “Laboratory diagnosis of biotinidase deficiency, 2017 update: A technical standard and guideline of the American College of Medical Genetics and Genomics.” \textit{Genetics in Medicine} 19 (10). Nature Publishing Group. \href{https://doi.org/10.1038/gim.2017.84}{https://doi.org/10.1038/gim.2017.84}.}
+
+\hypertarget{citeproc_bib_item_5}{Team, R Core. 2020. \textit{R: A Language and Environment for Statistical Computing}. Vienna, Austria: R Foundation for Statistical Computing. \href{https://www.R-project.org/}{https://www.R-project.org/}.}
+
+\hypertarget{citeproc_bib_item_6}{Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” \textit{Journal of Open Source Software} 4 (43):1686. \href{https://doi.org/10.21105/joss.01686}{https://doi.org/10.21105/joss.01686}.}
+\end{hangparas}
+\end{document}
