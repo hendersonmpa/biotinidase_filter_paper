@@ -32,7 +32,7 @@
 \begin{frontmatter}
 \title{Collection of Dried Blood Spot Samples on Recently Printed Filter Paper Cards Inhibits Biotinidase Activity}
 \author[NSO]{Matthew P.A. Henderson\corref{cor1}}
-\ead{mhenders@cheo.on.ca}
+\ead{mhenderson@cheo.on.ca}
 \author[NSO]{Nathan McIntosh}
 \author[NSO]{Amy Chambers}
 \author[NSO]{Emily Desormeaux}
@@ -157,19 +157,21 @@ and 171 and allowing to dry at room temperature overnight.
 The R language for statistical computing was used for all data
 analysis with extensive use of tidyverse packages for data
 manipulation, mcr for deming regression, xts and tsa for time series
-analysis [cite:@R2020;@tidyverse;@mcr;@xts;@tsa].
+analysis [cite:@R2020;@tidyverse;@mcr;@xts;@tsa]. R scripts used for
+data analysis are available here:
+https://github.com/hendersonmpa/biotinidase_filter_paper
 
 * Results
 ** Time Series Analysis
 Time series analysis was performed to examine trends in biotinidase
 and GALT activity over the four year study period. As expected both
-analytes demonstrate seasonal variation in measured activity (Figure
-[[fig:biotpts]] and [[fig:galtpts]]). As a result the screen positive rate for
-biotinidase deficiency and galactosemia increased in the warm
-summer months. However, there was a period in early 2017 when the
+analytes demonstrate seasonal variation in measured activity, as a
+result the screen positive rate for biotinidase deficiency and
+galactosemia increased in the warm summer months (Figure [[fig:biotpts]]
+and [[fig:galtpts]]). However, there was a period in early 2017 when the
 screen positive rate for biotinidase deficiency increased despite
 external temperatures below zero (Figure [[fig:biotpts]] between the blue
-lines). There is no corresponding change in galactosemia screen
+lines). There is no corresponding change in the galactosemia screen
 positive rate during this time period (Figure [[fig:biotpts]] between the
 blue lines).
 
@@ -434,7 +436,7 @@ year & n & median & pos & rate \\
 	    on = 1)
 #+end_src
 
-#+CAPTION[]: Time series of weekly screen positive biotinidase deficiency referrals, biotinidase activity and mean weekly temperature (\degree{}C)
+#+CAPTION[]: Time series of weekly screen positive biotinidase deficiency referrals, median weekly biotinidase activity and mean weekly temperature (\degree{}C)
 #+NAME: fig:biotpts
 #+ATTR_LaTeX: :width \textwidth
 #+RESULTS:
@@ -465,7 +467,7 @@ year & n & median & pos & rate \\
 
 #+end_src
 
-#+CAPTION[]: Time series of weekly screen positive galactosemia referrals, GALT activity and mean weekly temperature (\degree{}C)
+#+CAPTION[]: Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C)
 #+NAME: fig:galtpts
 #+ATTR_LaTeX: :width \textwidth
 #+RESULTS:
@@ -473,13 +475,13 @@ year & n & median & pos & rate \\
 
 \clearpage
 
-** Seasonal Trend Decomposition
-Seasonal trend decomposition was used to identify trends in
-biotinidase activity after seasonal adjustment (Figure
+** Season and Trend Decomposition
+Season and trend decomposition was used to identify trends in
+biotinidase activity after adjustment for seasonal effects (Figure
 [[fig:decomp]]). Median weekly biotinidase activity revealed a marked
-seasonal effect with higher activity in the winter (median + \le 17 MRU)
-and lower activity in the summer (median - \le 20) in addtion to a
-non-linear negative trend during 2017 (Figure [[fig:decomp]]). External
+seasonal effect with higher activity in the winter (median + \le 17
+MRU) and lower activity in the summer (median - \le 20) in addtion to
+a non-linear negative trend during 2017 (Figure [[fig:decomp]]). External
 temperature was correlated with biotinidase activity (Pearson's r =
 0.81) but not with the observed negative trend (Pearson's r = 0.004).
 
@@ -518,11 +520,11 @@ cor(d$seasonal,d$trend, use = "pairwise.complete.obs")
 
 \clearpage
 
-** Biotinidase active by Filter Paper Collection Card Lot
+** Biotinidase Activity by Filter Paper Lot
 Time series analysis of median weekly biotinidase results grouped by
 filter paper lot revealed that filter paper cards exhibit a time
-dependent inhibition of biotinidase activity, observed in seven
-filter paper lots over four years (Figure [[fig:form]]).
+dependent inhibition of biotinidase activity, observed in seven filter
+paper lots over four years (Figure [[fig:form]]).
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/biotform.pdf :exports results :tangle yes
   biotdata$form_letter <- gsub("([[:upper:]]{1})([[:digit:]]{6})", "\\1", biotdata$form, perl = TRUE)
@@ -545,7 +547,7 @@ filter paper lots over four years (Figure [[fig:form]]).
        multi.panel = FALSE,
        yaxis.right = FALSE,
        main = "",
-       ylab = "Biotinidase")
+       ylab = "Median Weekly Biotinidase Activity")
 
 					  #July 2014 B6978414 W121
 					  #July 2015 B7012515 W141
@@ -562,7 +564,7 @@ filter paper lots over four years (Figure [[fig:form]]).
 
 #+end_src
 
-#+CAPTION[]: Median weekly biotinidase activity by filter paper collection card lot.
+#+CAPTION[]: Median weekly biotinidase activity by filter paper collection card lot. Each lot of filter paper is plotted independently and indicated with a distinct colour.
 #+NAME: fig:form
 #+ATTR_LaTeX: :width \textwidth
 #+RESULTS:
