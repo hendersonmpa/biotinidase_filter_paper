@@ -22,6 +22,7 @@
 #+LaTeX_HEADER: \usepackage{pdfpages}
 #+LaTeX_header: \usepackage{textpos}
 #+LaTeX_header: \usepackage[final]{draftwatermark}
+#+LaTeX_HEADER: \usepackage{gensymb}
 #+LaTeX_HEADER: \usepackage{amsmath}
 #+LaTeX_HEADER: \usepackage{chemfig}
 #+LaTeX_HEADER: \setchemfig{atom style={scale=0.45}}
@@ -30,7 +31,7 @@
 
 #+BEGIN_EXPORT LaTeX
 \begin{frontmatter}
-\title{Collection of Dried Blood Spot Samples on Recently Printed Filter Paper Cards Inhibits Biotinidase Activity}
+\title{Season and Filter Paper Collection Cards Affect Biotinidase Activity}
 \author[NSO]{Matthew P.A. Henderson\corref{cor1}}
 \ead{mhenderson@cheo.on.ca}
 \author[NSO]{Nathan McIntosh}
@@ -44,17 +45,19 @@
 \end{frontmatter}
 #+END_EXPORT
 
-* STARTED Abstract
-- Objective :: From 2016 to 2017 the annual screen positive rate for
-  biotinidase deficiency in Ontario more than doubled from
-  2.65x10^{-4} to 6.57x10^{-4}.
+* Abstract
+- Objective :: This study set out to examine preanlytical factors
+  affecting the frequency of positive results in newborn screening for
+  biotinidase deficiency. This is investigation was prompted by an
+  increase in annual screen positive rate for biotinidase deficiency
+  in Ontario from 2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
 
-- Design and Methods :: A data mining approach was used to investigate the role
-  of temperature, filter paper lot, and print run on the screen
-  positive rate for biotinidase deficiency. The laboratory information
-  system was queried for all biotinidase activity results for the
-  period 2014-01-12 to 2018-09-27 (n = 678,354). During the study
-  period biotinidase activity was measured on the SpotCheck Pro
+- Design and Methods :: A data mining approach was used to investigate
+  the role of temperature, filter paper lot, and print run on the
+  screen positive rate for biotinidase deficiency. The laboratory
+  information system was queried for all biotinidase activity results
+  for the period 2014-01-12 to 2018-09-27 (n = 678,354). During the
+  study period biotinidase activity was measured on the SpotCheck Pro
   platform (Astoria Pacific, Oregon USA.) with results reported in
   microplate response units (MRU).
 
@@ -82,55 +85,96 @@
 * Keywords
 Newborn Screening, Biotinidase Deficiency, Dried Blood Spots, Filter
 Paper, Seasonal Variation, Enzyme Activity
-* TODO Introduction
-- Biotinidase deficiency is an autosomal recessive disorder of biotin
-  recycling associated with secondary alterations in amino acid,
-  carbohydrate, and fatty acid metabolism (Figure [[fig:cycle]]).
+* Introduction
+This study set out to examine pre-analytical factors affecting the
+frequency of positive results in newborn screening for biotinidase
+deficiency. This investigation was prompted by a marked increase in
+annual screen positive rate for biotinidase deficiency in Ontario from
+2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
 
-- Biotinidase and newborn screening
-- Free biotin, whose primary source is the diet, is
-  actively transported across the intestinal membrane and blood–brain
-  barrier. This free biotin pool provides biotin to the various
-  apocarboxylases (pyruvate carboxylase, acetyl-CoA carboxylase,
-  propionyl-CoA carboxylase, and beta-methylcrotonyl-CoA
-  carboxylase). Holocarboxylase synthetase assembles active
-  holocarboxylases by covalently binding biotin to their active
-  sites. The carboxylases are important for gluconeogenesis, fatty
-  acid synthesis, and the catabolism of several branch-chain amino
-  acids. Eventually, the holocarboxylases are degraded proteolytically
-  to biocytin or small biotinyl-peptides. These compounds are further
-  cleaved by biotinidase to produce lysine and free biotin, which can
-  enter the free biotin pool, thereby recycling the vitamin. ACC,
-  acetyl-CoA carboxylase; AMP, adenosine monophosphate; ATP, adenosine
-  triphosphate; MCC, 3-methylcrotonyl carboxylase; PC, pyruvate
-  carboxylase; PCC, propionyl-CoA carboxylase; PPi, inorganic
-  pyrophosphate.
-- Biotinidase deficiency is caused by absent or markedly deficient
-  activity of biotinidase.
+Biotinidase deficiency is an autosomal recessive disorder caused by
+absent or markedly deficient activity of biotinidase.  Biotinidase is
+a cytosolic enzyme that liberates biotin from biocytin during the
+normal proteolytic turnover of holocarboxylases and other biotinylated
+proteins. The absence of appropriate biotin recycling is associated
+with secondary alterations in amino acid, carbohydrate, and fatty acid
+metabolism (Figure [[fig:cycle]]).
 
-- Biotinidase is a cytosolic enzyme that liberates biotin from
-  biocytin during the normal proteolytic turnover of holocarboxylases
-  and other biotiny-lated proteins.
+Virginia was the first jurisdiction to perform universal newborn
+screening for biotinidase deficiency, beginning in 1984
+[cite:@Wolf2015a]. Biotinidase deficiency has been a target disorder
+for newborn screening in Ontario since 2007 and was added to the
+Recommended Universal Screening Panel in the United States in 2006
+[cite:@Watson2006].  Based on newborn screening outcome data from
+2006, the incidence of profound biotinidase deficiency in the United
+States is estimated at 1/80,000 births, and partial biotinidase
+deficiency between 1/31,000 and 1/40,000
+[cite:@Strovel2017]. Diagnosis of biotinidase deficiency is based on
+demonstrating deficient enzyme activity in serum or plasma. Patients
+with profound biotinidase deficiency have less than 10% of mean normal
+serum activity [cite:@Strovel2017]. Patients with partial biotinidase
+deficiency have 10-30% of mean normal serum activity
+[cite:@Strovel2017].
 
-- Based on newborn screening outcome data from 2006, the incidence of
-  profound biotinidase deficiency in the United States is estimated at
-  1/80,000 births, and partial biotinidase deficiency between 1/31,000
-  and 1/40,000 [cite:@Strovel2017].
+Avoiding false negative newborn screening results is of paramount
+importance in newborn screening for treatable disorders. There is
+recognition that false positive newborn screening results are also an
+adverse outcome of newborn screening and need to be reduced for the
+benefit of families and the healthcare system [cite:@Kwon2000]. A
+previous observational study examining of the affect of season on the
+screen positive rate for biotinidase deficiency found no significant
+seasonal effect, this may be due to differences in climate and
+screening thresholds [cite:@Thibodeau1993]. Controlled experiments
+demonstrate that exposure to high temperature and humidity decreases
+biotinidase activity. Evidence presented here demonstrates that both
+seasonal conditions and filter paper collection cards affect
+biotinidase activity.
 
-- Diagnosis of biotinidase deficiency is based on demonstrating
-  deficient enzyme activity in serum or plasma
 
-- Patients with profound biotinidase deficiency have less than 10% of
-  mean normal serum activity[cite:@Strovel2017].
+#+BEGIN_SRC  dot :file ./figures/cycle.pdf :cmdline -Kdot -Tpdf
+      digraph {
+	    edge [fontname="Helvetica-Bold"];
+    // substrate and product nodes
+	  node [fontname=helvetica,style=filled, color=lightgrey];
+	      diet[label= "Dietary Free\nBiotin"];
+	      free[label= "Free Biotin"];
+	      atp[label="ATP"];
+	      apo[label="Apocarboxylases"];
+	      amp[label="AMP"];
+	      hc[label="Holocarboxylases"];
+	      biocytin[label="Biocytin",shape="oval"];
+	      lysine[label="Lysine",shape="oval"];
 
-- Patients with partial biotinidase deficiency have 10-30% of mean
-  normal serum activity[cite:@Strovel2017].
+     //enzyme nodes
+	  node [shape=point, style=filled, color=black];
+	      hcs[];
+	      biotinidase[];
+	      protease;
+     // function nodes
+	   node [shape=octagon, style=filled, color=whitesmoke];
+	      functions[label="Lipid Metabolism\nGluconeogenesis\nAmino Acid Metabolism"];
 
+     // connections
+	      diet -> free[label="Biotin \n transport"];
+	      free -> hcs[arrowhead="none"];
+	      atp -> hcs[arrowhead="none"];
+	      apo -> hcs[arrowhead="none"];
+	      hcs -> hc[taillabel="Holocarboxylase \n Synthetase"];
+	      hcs -> amp;
+	      hc -> functions[style="dotted"];
+	      hc -> protease[headlabel="Proteases",arrowhead="none"];
+	      protease -> biocytin;
+	      biocytin -> biotinidase[arrowhead="none"];
+	      biotinidase -> free[taillabel="Biotinidase"];
+	      biotinidase -> lysine;
+      }
+#+END_SRC
 
-#+CAPTION[]: The Biotin Cycle[cite:@Strovel2017]
+#+CAPTION[]: The Biotin Cycle adapted from [cite:@Strovel2017]. Grey ovals contain substrates and products. Labelled black points represent enzymes. Metabolic functions of holocarboxylases are listed in the octagon. 
 #+NAME: fig:cycle
-#+ATTR_LaTeX: :width .9\textwidth
-[[file:./figures/biot_cycle.png]]
+#+ATTR_LaTeX: :width .8\textwidth
+#+RESULTS:
+[[file:./figures/cycle.pdf]]
 
 * Material and Methods
 A data mining approach was used to investigate the affect of
@@ -601,14 +645,14 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
   ##     separate(sample, c("lot", "sample")) %>%
   ##     select(-well) %>%
   ##     spread(key = lot, value = value)
-  comp.deming3 <- mcreg(x = comp$w152, y =comp$w171, error.ratio = 1, alpha = 0.05,
+  comp.deming <- mcreg(x = comp$w152, y =comp$w171, error.ratio = 1, alpha = 0.05,
                         mref.name = "W152", mtest.name = "W171", sample.names = NULL,
                         method.reg = "Deming", method.ci = "bootstrap",
                         method.bootstrap.ci = "BCa",
                         nsamples = 999, rng.seed = NULL, rng.kind = "Mersenne-Twister", iter.max = 30,
                         threshold = 1e-06, na.rm = FALSE, NBins = 1e+06)
 
-  plot(comp.deming3, x.lab = "W151", y.lab = "W171", main= "")
+  plot(comp.deming, x.lab = "W151", y.lab = "W171", main= "")
 
 
 #+end_src
@@ -642,14 +686,14 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
   ##     separate(sample, c("lot", "sample")) %>%
   ##     select(-well) %>%
   ##     spread(key = lot, value = value)
-  comp.deming4 <- mcreg(x = comp$w152, y =comp$w171, error.ratio = 1, alpha = 0.05,
+  comp2.deming <- mcreg(x = comp2$w152, y =comp2$w171, error.ratio = 1, alpha = 0.05,
                         mref.name = "W152", mtest.name = "W171", sample.names = NULL,
                         method.reg = "Deming", method.ci = "bootstrap",
                         method.bootstrap.ci = "BCa",
                         nsamples = 999, rng.seed = NULL, rng.kind = "Mersenne-Twister", iter.max = 30,
                         threshold = 1e-06, na.rm = FALSE, NBins = 1e+06)
 
-  plot(comp.deming4, x.lab = "W151", y.lab = "W171", main= "")
+  plot(comp2.deming, x.lab = "W151", y.lab = "W171", main= "")
 #+end_src
 
 #+CAPTION: Biotinidase Filter Paper W152 v W117 Lot Comparison at Time 0 + 2 months.
@@ -660,14 +704,20 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
 
 \clearpage
 
-* TODO Conclusions
-
-- In Ontario, new lots of filter paper collection cards are generally
-  issued once a year. Due to operational changes in 2017 three filter
-  paper collection cards lots were issued.
-- These new filter paper lots caused a pronounced negative trend in
-  biotinidase activity leading to an increased biotinidase deficiency
-  screen positive rate in 2017.
+* TODO Discussion
+ This should explore the significance of the results of the work, not
+ repeat them. A combined Results and Discussion section is often
+ appropriate. Avoid extensive citations and discussion of published
+ literature.
+* Conclusions
+In Ontario, new batches of filter paper collection cards are
+generally printed and issued to birthing centres once a year in
+early July. Introduction of three batches of filter paper cards in a
+short period of time caused a pronounced negative trend in
+biotinidase activity leading to an increased biotinidase deficiency
+screen positive rate in 2017. Filter paper collection cards that
+have been sequestered for two months prior to use no longer inhibit
+biotinidase activity.
 
 * References
 #+print_bibliography:
