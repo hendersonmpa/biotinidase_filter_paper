@@ -46,41 +46,26 @@
 #+END_EXPORT
 
 * Abstract
-- Objective :: This study set out to examine preanlytical factors
+- Objective :: This study set out to examine pre-analytical factors
   affecting the frequency of positive results in newborn screening for
-  biotinidase deficiency. This is investigation was prompted by an
+  biotinidase deficiency. This investigation was prompted by an
   increase in annual screen positive rate for biotinidase deficiency
   in Ontario from 2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
 
-- Design and Methods :: A data mining approach was used to investigate
-  the role of temperature, filter paper lot, and print run on the
-  screen positive rate for biotinidase deficiency. The laboratory
-  information system was queried for all biotinidase activity results
-  for the period 2014-01-12 to 2018-09-27 (n = 678,354). During the
-  study period biotinidase activity was measured on the SpotCheck Pro
-  platform (Astoria Pacific, Oregon USA.) with results reported in
-  microplate response units (MRU).
-
 - Results :: Decomposition was used to separate seasonality from an
-  underlying trend in the 4 year time series of biotindase activity
-  results. This analysis revealed a marked seasonal effect (winter =
-  mean + <= 16 MRU, summer = mean - <= 19 MRU) and a profound
-  non-linear negative trend (max = 126.7 MRU, min = MRU). External
-  temperature was correlated with biotinidase results (Pearson's r =
-  0.79) but not with the observed negative trend (Pearson's r =
-  -0.06). Time series analysis of biotinidase results grouped by print
-  lot of filter paper revealed that recently printed filter paper
-  cards exhibit a time dependent inhibition of biotinidase activity
-  (observed in seven print lots over four years). This inhibition
-  resolved in approximately 3 months (Lot A: mean result 0-3.5 months
-  = 66.0 MRU, mean result 3-6 months = 90.3 MRU).
+  underlying trend in the time series of biotindase activity
+  measurements for the period 2014-01-12 to 2019-07-27 (n =
+  798,770). This analysis revealed a marked seasonal effect (winter =
+  median + <= 17 MRU, summer = mean - <= 20 MRU) and a non-linear
+  negative trend. External temperature was correlated with biotinidase
+  results (Pearson's r = 0.71) but not with the observed negative
+  trend (Pearson's r = 0.004). Time series analysis of biotinidase
+  results grouped by print lot of filter paper revealed that recently
+  printed filter paper cards exhibit a time dependent inhibition of
+  biotinidase activity. This inhibition resolved over time.
 
-- Conclusions :: In Ontario, lots of filter paper collection cards are
-  generally issued once a year. Due to operational changes in 2017
-  four filter paper collection cards lots were issued. These new
-  filter paper lots caused a pronounced negative trend in biotinidase
-  activity leading to an increased biotinidase deficiency screen
-  positive rate in 2017.
+- Conclusions :: Increased seasonal temperatures and collection on
+  newly printed filter cards inhibits biotindase activity. 
 
 * Keywords
 Newborn Screening, Biotinidase Deficiency, Dried Blood Spots, Filter
@@ -100,11 +85,11 @@ proteins. The absence of appropriate biotin recycling is associated
 with secondary alterations in amino acid, carbohydrate, and fatty acid
 metabolism (Figure [[fig:cycle]]).
 
-Virginia was the first jurisdiction to perform universal newborn
-screening for biotinidase deficiency, beginning in 1984
-[cite:@Wolf2015a]. Biotinidase deficiency has been a target disorder
-for newborn screening in Ontario since 2007 and was added to the
-Recommended Universal Screening Panel in the United States in 2006
+The state of Virginia was the first jurisdiction to perform universal
+newborn screening for biotinidase deficiency, beginning in 1984
+[cite:@Wolf2015a]. Biotinidase deficiency was added to the Recommended
+Universal Screening Panel in the United States in 2006 and has been a
+target disorder for newborn screening in Ontario since 2007
 [cite:@Watson2006].  Based on newborn screening outcome data from
 2006, the incidence of profound biotinidase deficiency in the United
 States is estimated at 1/80,000 births, and partial biotinidase
@@ -117,18 +102,19 @@ deficiency have 10-30% of mean normal serum activity
 [cite:@Strovel2017].
 
 Avoiding false negative newborn screening results is of paramount
-importance in newborn screening for treatable disorders. There is
-recognition that false positive newborn screening results are also an
-adverse outcome of newborn screening and need to be reduced for the
-benefit of families and the healthcare system [cite:@Kwon2000]. A
-previous observational study examining of the affect of season on the
-screen positive rate for biotinidase deficiency found no significant
-seasonal effect, this may be due to differences in climate and
-screening thresholds [cite:@Thibodeau1993]. Controlled experiments
-demonstrate that exposure to high temperature and humidity decreases
-biotinidase activity. Evidence presented here demonstrates that both
-seasonal conditions and filter paper collection cards affect
-biotinidase activity.
+importance in newborn screening. There is recognition that false
+positive newborn screening results are also an adverse outcome of
+newborn screening and need to be reduced for the benefit of families
+and the healthcare system [cite:@Kwon2000]. A previous observational
+study examining the affect of season on the screen positive rate for
+biotinidase deficiency found no significant seasonal effect, this may
+be due to differences in climate and screening thresholds
+[cite:@Thibodeau1993]. Controlled experiments demonstrate that
+exposure to high temperature and humidity decreases biotinidase
+activity. Evidence presented here demonstrates that increased seasonal
+temperatures and collection on newly printed filter cards inhibits
+biotindase activity results in an increased screen positive rate.
+
 
 
 #+BEGIN_SRC  dot :file ./figures/cycle.pdf :cmdline -Kdot -Tpdf
@@ -152,7 +138,7 @@ biotinidase activity.
 	      protease;
      // function nodes
 	   node [shape=octagon, style=filled, color=whitesmoke];
-	      functions[label="Lipid Metabolism\nGluconeogenesis\nAmino Acid Metabolism"];
+	      functions[label="Fatty Acid Metabolism\nGluconeogenesis\nAmino Acid Metabolism"];
 
      // connections
 	      diet -> free[label="Biotin \n transport"];
@@ -195,14 +181,16 @@ Whole blood samples were heat treated to reduce biotinidase
 activity. The heat treated whole blood was then mixed with untreated
 whole blood in a serial dilution to create a set of samples with a
 range of biotinidase activity. Biotinidase acitivty in these samples
-was measured after spotting onto filter paper lots w152, w161, w162
-and 171 and allowing to dry at room temperature overnight.
+was measured after spotting onto filter paper lots W152, W161, W162
+and W171 and allowing to dry at room temperature overnight.
 
-The R language for statistical computing was used for all data
-analysis with extensive use of tidyverse packages for data
-manipulation, mcr for deming regression, xts and tsa for time series
-analysis [cite:@R2020;@tidyverse;@mcr;@xts;@tsa]. R scripts used for
-data analysis are available here:
+This manuscript was prepared using the Org-mode environment for
+literate programming and reproducible research
+[cite:@Schulte2012]. The R language for statistical computing was used
+for all data analysis with tidyverse packages for
+data manipulation, mcr for deming regression, xts and tsa for time
+series analysis [cite:@R2020;@tidyverse;@mcr;@xts;@tsa]. R scripts
+used for data analysis are available here:
 https://github.com/hendersonmpa/biotinidase_filter_paper
 
 * Results
@@ -376,26 +364,26 @@ blue lines).
 		pos = length(result_code[result_code == "BIOT-C-01-012"]),
 		rate = pos/n) %>%
       xtable(caption = "Yearly Biotinidase Screen Positive Rate",
-	     label = "tab:biot_year", display = c("d", "d", "d", "f", "d", "g")) %>%
+	     label = "tab:biot_year", display = c("d", "d", "d", "f", "d", "e")) %>%
       print(include.rownames = FALSE)
 #+end_src
 
 #+RESULTS:
 #+begin_export latex
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Wed Dec  8 10:32:27 2021
+% Fri Dec 17 16:07:20 2021
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
   \hline
 year & n & median & pos & rate \\ 
   \hline
-  2014 & 140620 & 119.87 &  78 & 0.00055 \\ 
-  2015 & 140812 & 122.93 &  40 & 0.00028 \\ 
-  2016 & 143361 & 120.25 &  38 & 0.00027 \\ 
-  2017 & 144524 & 105.31 &  95 & 0.00066 \\ 
-  2018 & 146365 & 111.90 &  88 & 0.0006 \\ 
-  2019 & 83088 & 120.49 &  27 & 0.00032 \\ 
+2014 & 140616 & 119.87 &  78 & 5.55e-04 \\ 
+  2015 & 140812 & 122.93 &  40 & 2.84e-04 \\ 
+  2016 & 143359 & 120.25 &  38 & 2.65e-04 \\ 
+  2017 & 144521 & 105.31 &  95 & 6.57e-04 \\ 
+  2018 & 146361 & 111.90 &  88 & 6.01e-04 \\ 
+  2019 & 83087 & 120.49 &  27 & 3.25e-04 \\ 
    \hline
 \end{tabular}
 \caption{Yearly Biotinidase Screen Positive Rate} 
@@ -412,26 +400,26 @@ year & n & median & pos & rate \\
                 pos = length(result_code[result_code == "GALT-C-01-012"]),
                 rate = pos/n) %>%
       xtable(caption = "Yearly Galactosemia Screen Positive Rate",
-             label = "tab:galt_year", display = c("d", "d", "d", "f", "d", "g")) %>%
+             label = "tab:galt_year", display = c("d", "d", "d", "f", "d", "e")) %>%
       print(include.rownames = FALSE)
 #+end_src
 
 #+RESULTS:
 #+begin_export latex
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Wed Dec  8 10:33:20 2021
+% Fri Dec 17 16:07:10 2021
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
   \hline
 year & n & median & pos & rate \\ 
   \hline
-2014 & 140678 & 8.37 &  20 & 0.00014 \\ 
-  2015 & 140171 & 7.93 &  12 & 8.6e-05 \\ 
-  2016 & 143352 & 8.13 &  21 & 0.00015 \\ 
-  2017 & 143261 & 8.46 &  14 & 9.8e-05 \\ 
-  2018 & 143592 & 8.22 &  13 & 9.1e-05 \\ 
-  2019 & 82116 & 8.07 &   6 & 7.3e-05 \\ 
+2014 & 140678 & 8.37 &  20 & 1.42e-04 \\ 
+  2015 & 140171 & 7.93 &  12 & 8.56e-05 \\ 
+  2016 & 143352 & 8.13 &  21 & 1.46e-04 \\ 
+  2017 & 143261 & 8.46 &  14 & 9.77e-05 \\ 
+  2018 & 143592 & 8.22 &  13 & 9.05e-05 \\ 
+  2019 & 82116 & 8.07 &   6 & 7.31e-05 \\ 
    \hline
 \end{tabular}
 \caption{Yearly Galactosemia Screen Positive Rate} 
@@ -471,7 +459,7 @@ year & n & median & pos & rate \\
 	 multi.panel = TRUE, 
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
-	 main = "")
+	 main = "Biotinidase")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue")
   addLegend(legend.loc = "topright",
 	    legend.names = c("screen positive", "median activity", "temperature (C)"),
@@ -501,7 +489,7 @@ year & n & median & pos & rate \\
 	 multi.panel = TRUE, 
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
-	 main = "")
+	 main = "GALT")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue")
   addLegend(legend.loc = "topright",
 	    legend.names = c("screen positive", "median activity", "temperature (C)"),
@@ -522,12 +510,12 @@ year & n & median & pos & rate \\
 ** Season and Trend Decomposition
 Season and trend decomposition was used to identify trends in
 biotinidase activity after adjustment for seasonal effects (Figure
-[[fig:decomp]]). Median weekly biotinidase activity revealed a marked
-seasonal effect with higher activity in the winter (median + \le 17
-MRU) and lower activity in the summer (median - \le 20) in addtion to
-a non-linear negative trend during 2017 (Figure [[fig:decomp]]). External
-temperature was correlated with biotinidase activity (Pearson's r =
-0.81) but not with the observed negative trend (Pearson's r = 0.004).
+[[fig:decomp]]). This analysis revealed a marked seasonal effect with
+higher activity in the winter (median + \le 17 MRU) and lower activity
+in the summer (median - \le 20 MRU) and a non-linear negative trend
+during 2017 and 2018 (Figure [[fig:decomp]]). External temperature was
+correlated with biotinidase activity (Pearson's r = 0.81) but not with
+the observed negative trend (Pearson's r = 0.004).
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/biotdecomp.pdf :exports results  :tangle yes
   ## Decompose
@@ -566,9 +554,13 @@ cor(d$seasonal,d$trend, use = "pairwise.complete.obs")
 
 ** Biotinidase Activity by Filter Paper Lot
 Time series analysis of median weekly biotinidase results grouped by
-filter paper lot revealed that filter paper cards exhibit a time
+filter paper lot revealed that filter paper cards exhibited a time
 dependent inhibition of biotinidase activity, observed in seven filter
-paper lots over four years (Figure [[fig:form]]).
+paper lots over four years (Figure [[fig:form]]). Due to a time sensitive
+change in the filter paper collection card, lot W161 was put into
+circulation soon after printing. Inhibition of biotinidase activity in
+this card lot was most pronounced and took over 5 months to resolve
+(Figure [[fig:form]], yellow line and Table \ref{tab:w161_months}).
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/biotform.pdf :exports results :tangle yes
   biotdata$form_letter <- gsub("([[:upper:]]{1})([[:digit:]]{6})", "\\1", biotdata$form, perl = TRUE)
@@ -616,12 +608,57 @@ paper lots over four years (Figure [[fig:form]]).
 
 \clearpage
 
-** Inhibition of Biotinidase Resolved After 2 Months 
-Direct comparison of measured biotinidase activity for whole blood
-samples spotted onto a paper lot (w171) recently received from the
-printers with material in circulation shows a notable negative
-bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after two months
-(Figures [[fig:form]] and [[fig:spmat2]]).
+#+begin_src R :session *R* :results output latex :exports results :tangle yes
+  formweekm %>%
+    select(week, n, median, W161) %>%
+    na.omit() %>%
+    group_by(Month = month(week, label = TRUE, abbr = FALSE)) %>%
+    summarise("Median" = median(median),
+	      "Median W161" = median(W161),
+	      "Difference" = `Median W161` - `Median`,
+	      "% Difference" = (`Median W161` - `Median`) / `Median` * 100) %>%
+    xtable(caption = "Median Activity for Filter Card Lot W161",
+	   label = "tab:w161_months", digits = 1, display = c("s", "s","f","f","f","f")) %>%
+    print(include.rownames = FALSE)
+#+end_src
+
+#+RESULTS:
+#+begin_export latex
+% latex table generated in R 4.0.3 by xtable 1.8-4 package
+% Fri Dec 17 14:55:05 2021
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+  \hline
+  Month & Median & Median W161 & Difference & \% Difference \\ 
+  \hline
+  February & 137.3 & 57.6 & -79.8 & -58.1 \\ 
+  March & 145.2 & 63.8 & -81.4 & -56.1 \\ 
+  April & 135.4 & 69.7 & -65.7 & -48.5 \\ 
+  May & 128.2 & 74.8 & -53.3 & -41.6 \\ 
+  June & 120.2 & 79.4 & -40.8 & -33.9 \\ 
+  July & 117.7 & 92.2 & -25.5 & -21.7 \\ 
+  August & 111.3 & 102.1 & -9.3 & -8.3 \\ 
+  September & 119.0 & 107.5 & -11.5 & -9.7 \\ 
+  October & 124.0 & 122.6 & -1.4 & -1.2 \\ 
+  November & 135.4 & 137.8 & 2.4 & 1.8 \\ 
+  December & 132.3 & 135.7 & 3.3 & 2.5 \\ 
+   \hline
+\end{tabular}
+\caption{Median Activity for All Samples and Filter Card Lot W161} 
+\label{tab:w161_months}
+\end{table}
+#+end_export
+
+** Inhibition of Biotinidase Resolved After 2 Months
+Based on the observed inhibition of biotinidase activity with filter
+paper lot W161 (Figure [[fig:form]], yellow line and Table
+\ref{tab:w161_months}) a controlled experiment was conducted. Whole
+blood samples were spotted onto a new filter lot (W171) and filter
+paper lots in circulation (W152, W161, W162). Lot 171 showed a notable
+negative bias (Figure [[fig:spmat]]). Inhibition of biotindase activity by
+filter paper lot W171 resolved after two months of storage in the
+laboratory (Figure [[fig:spmat2]]).
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/spmat.pdf :exports results
   comp <- read_excel("./data/BIO Filter paper Study Data_Sept 2017.xls", sheet = 7)
@@ -634,7 +671,7 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
 	main="")
 #+end_src
 
-#+CAPTION: Comparison of biotinidase activity in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0. linear regression- blue, line of identity- red
+#+CAPTION: Comparison of biotinidase activity (MRU) in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0. linear regression- blue, line of identity- red
 #+LABEL: fig:spmat
 #+ATTR_LaTeX: width=0.8\textwidth
 #+RESULTS:
@@ -657,7 +694,7 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
 
 #+end_src
 
-#+CAPTION: Biotinidase Activity on Filter Paper Lot W152 v W171 with Deming Regression at Time 0.
+#+CAPTION: Biotinidase Activity (MRU) on Filter Paper Lot W152 v W171 with Deming Regression at Time 0.
 #+LABEL: fig:demingw171
 #+ATTR_LaTeX: width=0.8\textwidth
 #+RESULTS:
@@ -675,7 +712,7 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
 	  main="")
 #+end_src
 
-#+CAPTION: Comparison of biotinidase activity in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0 + 2 months. linear regression- blue, line of identity- red
+#+CAPTION: Comparison of biotinidase activity (MRU) in samples collected simultaneously on filter paper lots w152, w161, w162, w171 at Time 0 + 2 months. linear regression- blue, line of identity- red
 #+LABEL: fig:spmat2
 #+ATTR_LaTeX: width=0.8\textwidth
 #+RESULTS:
@@ -696,7 +733,7 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
   plot(comp2.deming, x.lab = "W151", y.lab = "W171", main= "")
 #+end_src
 
-#+CAPTION: Biotinidase Filter Paper W152 v W117 Lot Comparison at Time 0 + 2 months.
+#+CAPTION: Biotinidase Activity (MRU) on Filter Paper Lot W152 v W171 with Deming Regression at Time 0 + 2 months.
 #+LABEL: fig:demingw171_2
 #+ATTR_LaTeX: width=0.8\textwidth
 #+RESULTS:
@@ -704,11 +741,14 @@ bias (Figure [[fig:spmat]]). Inhibition of biotindase activity resolved after tw
 
 \clearpage
 
+
 * TODO Discussion
  This should explore the significance of the results of the work, not
  repeat them. A combined Results and Discussion section is often
  appropriate. Avoid extensive citations and discussion of published
  literature.
+
+ 
 * Conclusions
 In Ontario, new batches of filter paper collection cards are
 generally printed and issued to birthing centres once a year in
