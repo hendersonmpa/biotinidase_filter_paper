@@ -62,36 +62,37 @@
   with biotinidase results (Pearson's r = 0.79) but not with the
   observed negative trend (Pearson's r = 0.0025). Time series analysis
   of biotinidase results grouped by print lot of filter paper revealed
-  that recently printed filter paper cards exhibit a time dependent
-  inhibition of biotinidase activity. This inhibition resolved over
-  time.
+  that recently printed filter paper cards inhibit biotinidase and
+  that this inhibition resolved over time.
 
 - Conclusions :: Increased seasonal temperatures and collection on
-  newly printed filter cards inhibits biotindase activity. 
+  newly printed filter cards inhibit biotindase activity. 
 
 * Keywords
 newborn screening, biotinidase deficiency, dried blood spots, filter
 paper, seasonal variation, enzyme activity
 * Introduction
-This study set out to examine pre-analytical factors affecting the
-frequency of positive results in newborn screening for biotinidase
-deficiency. This investigation was prompted by a marked increase in
-annual screen positive rate for biotinidase deficiency in Ontario from
-2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
+
+Newborn screening for biotinidase deficiency is based on measurement
+of biotinidase activity in dried blood spots. This investigation was
+prompted by a marked increase in annual screen positive rate for
+biotinidase deficiency in Ontario from 2.65x10^{-4} in 2016 to
+6.57x10^{-4} in 2017 and set out to examine pre-analytical factors
+affecting in newborn screening for biotinidase deficiency.
 
 Biotinidase deficiency is an autosomal recessive disorder caused by
-absent or markedly deficient activity of biotinidase.  Biotinidase is
-a cytosolic enzyme that liberates biotin from biocytin during the
-normal proteolytic turnover of holocarboxylases and other biotinylated
+absent or markedly deficient activity of biotinidase the cytosolic
+enzyme that liberates biotin from biocytin during the normal
+proteolytic turnover of holocarboxylases and other biotinylated
 proteins. The absence of appropriate biotin recycling is associated
 with secondary alterations in amino acid, carbohydrate, and fatty acid
 metabolism (Figure [[fig:cycle]]). Neurological symptoms such as lethargy,
 muscular hypotonia, grand mal and myoclonic seizures, and ataxia may
-occur in the neonatal period. Many children also have developmental
-delay, hearing loss, conjunctivitis and visual problems including
-optic atrophy. Metabolic acidosis and the characteristic organic
-aciduria of multiple carboxylase deficiency is often absent in the
-early stages of the disease.
+occur in the neonatal period. Many children also have skin rash,
+alopecia, developmental delay, hearing loss, conjunctivitis and visual
+problems including optic atrophy. Metabolic acidosis and the
+characteristic organic aciduria of multiple carboxylase deficiency is
+often absent in the early stages of the disease.
 
 The state of Virginia was the first jurisdiction to perform universal
 newborn screening for biotinidase deficiency, beginning in 1984
@@ -101,28 +102,44 @@ target disorder for newborn screening in Ontario since 2007
 [cite:@Watson2006].  Based on newborn screening outcome data from
 2006, the incidence of profound biotinidase deficiency in the United
 States is estimated at 1/80,000 births, and partial biotinidase
-deficiency between 1/31,000 and 1/40,000
-[cite:@Strovel2017]. Diagnosis of biotinidase deficiency is based on
-demonstrating deficient enzyme activity in serum or plasma. Patients
-with profound biotinidase deficiency have less than 10% of mean normal
-serum activity [cite:@Strovel2017]. Patients with partial biotinidase
-deficiency have 10-30% of mean normal serum activity
-[cite:@Strovel2017].
+deficiency between 1/31,000 and 1/40,000 [cite:@Strovel2017]. A
+similar study conducted in Ontario found a combined prevalence of
+profound and partial biotinidase deficiency at a higher ratio of
+approximately 1 in 15,000 [cite:@Gannavarapu2015].  Diagnosis of
+biotinidase deficiency is based on demonstrating deficient enzyme
+activity in serum or plasma. Patients with profound biotinidase
+deficiency have less than 10% of mean normal serum activity
+[cite:@Strovel2017]. Patients with partial biotinidase deficiency have
+10-30% of mean normal serum activity [cite:@Strovel2017]. 
 
-Avoiding false negative newborn screening results is of paramount
-importance in newborn screening. There is recognition that false
-positive newborn screening results are also an adverse outcome of
-newborn screening and need to be reduced for the benefit of families
-and the healthcare system [cite:@Kwon2000]. A previous observational
-study examining the affect of season on the screen positive rate for
+Most pathogenic variants in the BTD gene cause complete loss or
+near-complete loss of biotinidase enzyme activity. A combination of
+two of these profound biotinidase deficiency alleles results in
+profound biotinidase deficiency. The p.D444H variant is the most
+common pathological variant observed in newborn screen positive
+infants in Ontario [cite:@Gannavarapu2015]. Compound heterozygotes for
+the p.D444H pathogenic variant and a profound biotinidase deficiency
+allele results in profound biotinidase deficiency with approximately
+20%-25% of mean normal serum biotinidase enzyme activity. Individuals
+who are homozygous for the p.D444H pathogenic variant are expected to
+have approximately 45%-50% of mean normal serum biotinidase enzyme
+activity and do not require biotin therapy [cite:@Wolf2016].
+
+While avoiding false negative newborn screening results is of
+paramount importance in newborn screening, there is recognition that
+false positive newborn screening results are also an adverse outcome
+of newborn screening and need to be reduced for the benefit of
+families and the healthcare system
+[cite:@Kwon2000;@Brockow2019;@Karaceper2016]. A previous observational
+study examining the effect of season on the screen positive rate for
 biotinidase deficiency found no significant seasonal effect, this may
-be due to differences in climate and screening thresholds
-[cite:@Thibodeau1993]. Controlled experiments demonstrate that
-exposure to high temperature and humidity decreases biotinidase
-activity [cite:@Adam2011]. Evidence presented here demonstrates that
-increased seasonal temperatures and collection on newly printed filter
-cards inhibits biotindase activity results in an increased screen
-positive rate.
+be due to differences in climate, transportation practices and
+screening thresholds [cite:@Thibodeau1993]. Controlled experiments
+demonstrate that exposure to high temperature and humidity decreases
+biotinidase activity [cite:@Adam2011]. Evidence presented here
+demonstrates that increased seasonal temperatures and collection on
+newly printed filter cards inhibits biotindase activity results in an
+increased screen positive rate.
 
 
 
@@ -172,41 +189,55 @@ positive rate.
 [[file:./figures/cycle.pdf]]
 
 * Material and Methods
-A data mining approach was used to investigate the affect of
+** Observational Study
+A data mining approach was used to investigate the effect of
 temperature and filter paper lot on the screen positive rate for
 biotinidase deficiency. The laboratory information system was queried
 for all newborn screening biotinidase activity results from the first
 phase of screening for the period 2014-01-12 to 2019-07-27 (n =
-798,770). During the study period biotinidase activity was measured on
-the SpotCheck Pro platform (Astoria Pacific, Oregon USA.). Biotinidase
-activity was reported in microplate response units (MRU).
+798,770). During the study period dried blood spot biotinidase
+activity was measured on the SpotCheck Pro platform (Astoria Pacific,
+Oregon USA.). Biotinidase activity was reported in microplate response
+units (MRU). 903 filter paper was used for dried blood spot sample
+collection (EBF, South Carolina, USA).
 
 Daily mean temperature data for weather station 42183 in Barrie
 Ontario was downloaded from Environment Canada. Season and trend
 decomposition was used to separate seasonality from an underlying
 trend in the 4 year time series of biotindase activity results.
 
-Whole blood samples were heat treated to reduce biotinidase
-activity. The heat treated whole blood was then mixed with untreated
-whole blood in a serial dilution to create a set of samples with a
-range of biotinidase activity. Biotinidase acitivty in these samples
-was measured after spotting onto filter paper lots W152, W161, W162
-and W171 and allowing to dry at room temperature overnight.
+** Experimental Study
 
-This manuscript was prepared using the Org-mode environment for
+A set of dried blood spot samples with a range of biotinidase activity
+was created to directly compare filter paper lots. To reduce the
+endogenous biotinidase activity whole blood was spun down, the buffy
+coat was removed. The remaining red blood cell pellet was washed three
+times and re-suspended in saline. An untreated blood was then titrated
+into aliquots of the washed red blood cells to create a serial
+dilution. Biotinidase activity in these samples was measured after
+spotting onto filter paper lots W152, W161, W162 and W171 and allowing
+to dry at room temperature overnight.
+
+** Software
+The manuscript was prepared using the Org-mode environment for
 literate programming and reproducible research
 [cite:@Schulte2012]. The R language for statistical computing was used
-for all data analysis with tidyverse packages for
-data manipulation, mcr for deming regression, xts and tsa for time
-series analysis [cite:@R2020;@tidyverse;@mcr;@xts;@tsa]. R scripts
-used for data analysis are available here:
+for all data analysis with tidyverse packages for data manipulation,
+mcr for deming regression, xts and tsa for time series analysis
+[cite:@R2020;@tidyverse;@mcr;@xts;@tsa]. R scripts used for data
+analysis are available here:
 https://github.com/hendersonmpa/biotinidase_filter_paper
 
 * Results
 ** Time Series Analysis
 Time series analysis was performed to examine trends in biotinidase
-and GALT activity over the four year study period. As expected both
-analytes demonstrate seasonal variation in measured activity, as a
+and activity over the four year study period. Dried blood spot
+Galactose-1-phosphate uridylyltransferase (GALT) enzyme activity is
+measured on each newborn screening sample to screen for
+galactosemia. Previous studies have shown that GALT activity is
+affected by seasonal temperature, this measurement was included in
+this analysis for comparison. As expected both biotindase and GALT
+activity demonstrate seasonal variation in measured activity, as a
 result the screen positive rate for biotinidase deficiency and
 galactosemia increased in the warm summer months (Figure [[fig:biotpts]]
 and [[fig:galtpts]]). However, there was a period in early 2017 when the
@@ -585,7 +616,8 @@ this card lot was most pronounced and took over 5 months to resolve
       spread(key = lot, value = mean) %>%
       group_by(week) %>%
       summarise_all(funs(na.omit(.)[1])) 
-  lots <- c("B6978414","B7012515", "W152", "W161","B7078017","B7087317", "B7101418")
+  lots <- c("B6978414","B7012515", "B7019815", "W152", "W161","B7078017","B7087317", "B7101418")
+  #legend.names = c("w121", "w141a", "w41b", "w152", "w161", "w162", "w162b", "w171"),
   formslide <- xts(formweekm[, lots], formweekm$week)
 
   plot(formslide, col = c("black","red", "steelblue4", "gold2", "darkorchid" , "darkorange", "cyan4"),
@@ -602,7 +634,7 @@ this card lot was most pronounced and took over 5 months to resolve
 					  #Junw 2018 7115218 W171
 
   addLegend(legend.loc = "bottomright", 
-	    legend.names = c("w121", "w141", "w152", "w161", "w162", "w162b", "w171"),
+	    legend.names = c("w121", "w141a", "w141b", "w152", "w161", "w162", "w162b", "w171"),
 	    col = c("black","red", "steelblue4", "gold2", "darkorchid" , "darkorange", "cyan4"),
 	    lty = c("solid", "solid", "solid", "solid", "solid", "solid", "solid"),
 	    on = 1)
@@ -756,7 +788,7 @@ This study demonstrates that seasonal temperature and filter paper
 collection cards affect biotinidase activity. A previous study has
 used controlled experiments to showed that storage at high temperature
 and humidity decrease biotinidase activity [cite:@Adam2011]. However a
-previous observational study examining the affect of season on the
+previous observational study examining the effect of season on the
 screen positive rate for biotinidase deficiency found no significant
 seasonal effect, this may be due to differences in climate and
 screening thresholds [cite:@Thibodeau1993].
