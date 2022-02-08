@@ -1,4 +1,4 @@
-% Created 2022-02-04 Fri 17:52
+% Created 2022-02-08 Tue 13:45
 % Intended LaTeX compiler: pdflatex
 \documentclass[review]{elsarticle}
 \usepackage[utf8]{inputenc}
@@ -42,7 +42,7 @@
 
 
 \begin{frontmatter}
-\title{Seasonal Temperature and Filter Paper Collection Cards Affect Biotinidase Activity}
+\title{Biotindase Activity is Affected by Both Seasonal Temperature and Filter Collection Cards.}
 \author[NSO, UoO]{Matthew P.A. Henderson\corref{cor1}}
 \ead{mhenderson@cheo.on.ca}
 \author[NSO]{Nathan McIntosh}
@@ -57,7 +57,7 @@
 \end{frontmatter}
 
 \section*{Abstract}
-\label{sec:orga4c5dd8}
+\label{sec:org82013c6}
 \begin{description}
 \item[{Objective}] This study set out to examine pre-analytical factors
 affecting the frequency of positive results in newborn screening for
@@ -77,16 +77,16 @@ of biotinidase results grouped by print lot of filter paper revealed
 that recently printed filter paper cards inhibit biotinidase and
 that this inhibition resolved over time.
 
-\item[{Conclusions}] Increased seasonal temperatures and collection on
-newly printed filter cards inhibit biotindase activity.
+\item[{Conclusions}] Biotindase activity is inhibited by both increased
+seasonal temperature and collection on newly printed filter cards.
 \end{description}
 
 \section*{Keywords}
-\label{sec:org9025038}
+\label{sec:org41601fd}
 newborn screening, biotinidase deficiency, dried blood spots, filter
 paper, seasonal variation, enzyme activity
 \section*{Introduction}
-\label{sec:org03f6cec}
+\label{sec:org232eac0}
 
 Newborn screening for biotinidase deficiency is based on measurement
 of biotinidase activity in dried blood spots. This investigation was
@@ -101,7 +101,7 @@ enzyme that liberates biotin from biocytin during the normal
 proteolytic turnover of holocarboxylases and other biotinylated
 proteins. The absence of appropriate biotin recycling is associated
 with secondary alterations in amino acid, carbohydrate, and fatty acid
-metabolism (Figure \ref{fig:org082ab3c}). Neurological symptoms of biotinidase
+metabolism (Figure \ref{fig:orgef73c63}). Neurological symptoms of biotinidase
 deficiency such as lethargy, muscular hypotonia, grand mal and
 myoclonic seizures, and ataxia may occur in the neonatal period. Many
 affected children also have skin rash, alopecia, developmental delay,
@@ -131,7 +131,7 @@ results in profound biotinidase deficiency. The p.D444H variant is the
 most common pathological variant observed in newborn screen positive
 infants in Ontario (\hyperlink{citeproc_bib_item_5}{Gannavarapu et al. 2015}). Compound heterozygotes for
 the p.D444H pathogenic variant and a profound biotinidase deficiency
-allele results in profound biotinidase deficiency. Individuals who are
+allele have profound biotinidase deficiency. Individuals who are
 homozygous for the p.D444H pathogenic variant are expected to have
 approximately 45-50\% of mean normal serum biotinidase enzyme activity
 and do not generally require biotin therapy (\hyperlink{citeproc_bib_item_16}{Wolf 2016}).
@@ -156,13 +156,13 @@ positive rate.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.8\textwidth]{./figures/cycle.pdf}
-\caption{\label{fig:org082ab3c}The Biotin Cycle adapted from (\hyperlink{citeproc_bib_item_10}{Strovel et al. 2017}). Grey ovals contain substrates and products. Labelled black points represent enzymes. Metabolic functions of holocarboxylases are listed in the light grey octagon.}
+\caption{\label{fig:orgef73c63}The Biotin Cycle adapted from (\hyperlink{citeproc_bib_item_10}{Strovel et al. 2017}). Grey ovals contain substrates and products. Labelled black points represent enzymes. Metabolic functions of holocarboxylases are listed in the light grey octagon.}
 \end{figure}
 
 \section*{Material and Methods}
-\label{sec:orga79b0ad}
+\label{sec:orgebdcd91}
 \subsection*{Observational Study}
-\label{sec:org389e492}
+\label{sec:orgba73808}
 A data mining approach was used to investigate the effect of
 temperature and filter paper lot on the screen positive rate for
 biotinidase deficiency. The laboratory information system was queried
@@ -180,7 +180,7 @@ decomposition was used to separate seasonality from an underlying
 trend in the 4 year time series of biotindase activity results.
 
 \subsection*{Experimental Study}
-\label{sec:org68387fb}
+\label{sec:orgd5aee86}
 
 A set of dried blood spot samples with a range of biotinidase activity
 was created to directly compare filter paper lots. To reduce the
@@ -193,7 +193,7 @@ paper lots W152, W161, W162 and W171 and allowing to dry at room
 temperature overnight.
 
 \subsection*{Software}
-\label{sec:org73a163d}
+\label{sec:org381b32a}
 The manuscript was prepared using the Org-mode environment for
 literate programming and reproducible research (\hyperlink{citeproc_bib_item_9}{Schulte et al. 2012}). The R language for statistical computing was used
 for all data analysis with tidyverse packages for data manipulation,
@@ -202,9 +202,9 @@ analysis are available here:
 \url{https://github.com/hendersonmpa/biotinidase\_filter\_paper}
 
 \section*{Results}
-\label{sec:org0d724a5}
+\label{sec:org7bfc5cf}
 \subsection*{Time Series Analysis}
-\label{sec:org39df2c8}
+\label{sec:org714a603}
 Dried blood spot galactose-1-phosphate uridylyltransferase (GALT)
 enzyme activity is measured on each newborn screening sample to screen
 for galactosemia. Previous studies have shown that GALT activity is
@@ -213,15 +213,15 @@ to examine trends in biotinidase and activity over the four year study
 period. As expected both biotindase and GALT activity demonstrate
 seasonal variation in measured activity, as a result the screen
 positive rate for biotinidase deficiency and galactosemia increased in
-the warm summer months (Figure \ref{fig:org66b7778} and \ref{fig:orgc7ba5f8}). However,
+the warm summer months (Figure \ref{fig:orgad098c7} and \ref{fig:orgfc1515b}). However,
 there was a period in early 2017 when the screen positive rate for
 biotinidase deficiency increased despite external temperatures below
-zero (Figure \ref{fig:org66b7778} between the blue lines). There is no
+zero (Figure \ref{fig:orgad098c7} between the dashed blue lines). There is no
 corresponding change in the galactosemia screen positive rate during
-this time period (Figure \ref{fig:org66b7778} between the blue lines).
+this time period (Figure \ref{fig:orgad098c7} between the dashed blue lines).
 
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Fri Feb  4 17:51:58 2022
+% Tue Feb  8 13:45:32 2022
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
@@ -240,7 +240,7 @@ year & n & median & pos & rate \\
 \end{table}
 
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Fri Feb  4 17:51:59 2022
+% Tue Feb  8 13:45:32 2022
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
@@ -261,57 +261,57 @@ year & n & median & pos & rate \\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./figures/biotpts.pdf}
-\caption{\label{fig:org66b7778}Time series of weekly screen positive biotinidase deficiency referrals, median weekly biotinidase activity and mean weekly temperature (\degree{}C). Dashed blue lines flank a period with an elevated screen positive rate.}
+\caption{\label{fig:orgad098c7}Time series of weekly screen positive biotinidase deficiency referrals, median weekly biotinidase activity and mean weekly temperature (\degree{}C). Dashed blue lines flank a period with an elevated screen positive rate.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./figures/galtpts.pdf}
-\caption{\label{fig:orgc7ba5f8}Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C).  Dashed blue lines flank a period with an elevated screen positive rate.}
+\caption{\label{fig:orgfc1515b}Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C).  Dashed blue lines flank a period with an elevated screen positive rate.}
 \end{figure}
 
 \clearpage
 
 \subsection*{Season and Trend Decomposition}
-\label{sec:org340db58}
+\label{sec:org37822d6}
 Season and trend decomposition was used to identify trends in
 biotinidase activity after adjustment for seasonal effects (Figure
-\ref{fig:orgc3a63e4}). This analysis revealed a marked seasonal effect with
+\ref{fig:orgfeba996}). This analysis revealed a marked seasonal effect with
 higher activity in the winter (median + \(\le\) 17 MRU) and lower activity
 in the summer (median - \(\le\) 20 MRU) and a non-linear negative trend
-during 2017 and 2018 (Figure \ref{fig:orgc3a63e4}). External temperature was
+during 2017 and 2018 (Figure \ref{fig:orgfeba996}). External temperature was
 correlated with biotinidase activity (Pearson's r = 0.79) but not with
 the observed negative trend (Pearson's r = 0.025).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./figures/biotdecomp.pdf}
-\caption{\label{fig:orgc3a63e4}Decomposition of the median weekly biotinidiase activity time series into seasonal, random and trend components.}
+\caption{\label{fig:orgfeba996}Decomposition of the median weekly biotinidiase activity time series into seasonal, random and trend components.}
 \end{figure}
 
 \clearpage
 
 \subsection*{Biotinidase Activity by Filter Paper Lot}
-\label{sec:org8ebd58a}
+\label{sec:orga933e68}
 Time series analysis of median weekly biotinidase results grouped by
 filter paper lot revealed that filter paper cards exhibited a time
 dependent inhibition of biotinidase activity, observed in seven filter
-paper lots over four years (Figure \ref{fig:org25d6d79}). Due to a time sensitive
+paper lots over four years (Figure \ref{fig:org91ac77b}). Due to a time sensitive
 change required in the filter paper collection card, lot W161 was put into
 circulation soon after printing. Inhibition of biotinidase activity in
 this card lot was most pronounced and took over 5 months to resolve
-(Figure \ref{fig:org25d6d79}, purple line and Table \ref{tab:w161_months}).
+(Figure \ref{fig:org91ac77b}, purple line and Table \ref{tab:w161_months}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{./figures/biotform.pdf}
-\caption{\label{fig:org25d6d79}Median weekly biotinidase activity by filter paper collection card lot. Each lot of filter paper is plotted independently and indicated with a distinct colour.}
+\caption{\label{fig:org91ac77b}Median weekly biotinidase activity by filter paper collection card lot. Each lot of filter paper is plotted independently and indicated with a distinct colour.}
 \end{figure}
 
 \clearpage
 
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Fri Feb  4 17:52:03 2022
+% Tue Feb  8 13:45:37 2022
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrr}
@@ -336,48 +336,48 @@ February & 137.3 & 57.6 & -79.8 & -58.1 \\
 \end{table}
 
 \subsection*{Inhibition of Biotinidase Resolved After 2 Months}
-\label{sec:orgcb7f1cf}
+\label{sec:org27a9ff8}
 Based on the observed inhibition of biotinidase activity with filter
-paper lot W161 (Figure \ref{fig:org25d6d79}, purple line and Table
+paper lot W161 (Figure \ref{fig:org91ac77b}, purple line and Table
 \ref{tab:w161_months}) a controlled experiment was conducted to
 compare the biotinidase activity measured after spotting samples onto
 selected filter paper lots. Whole blood samples that had been treated
 to create a serial dilution of biotinidase activity were spotted onto
 a new filter lot (W171) and filter paper lots in circulation (W152,
 W161, W162). Lot W171 showed a notable negative bias in the first experiment (Figure
-\ref{fig:orga445bfe}). Inhibition of biotindase activity by filter paper lot W171
+\ref{fig:orgae0842c}). Inhibition of biotindase activity by filter paper lot W171
 resolved after two months of storage in the laboratory (Figure
-\ref{fig:orgbda57e6}).
+\ref{fig:orgefe16f5}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/spmat.pdf}
-\caption{\label{fig:orga445bfe}Comparison of biotinidase activity (MRU) in samples spotted simultaneously onto filter paper lots w152, w161, w162, w171 at Time 0. linear regression- blue, line of identity- red}
+\caption{\label{fig:orgae0842c}Comparison of biotinidase activity (MRU) in samples spotted simultaneously onto filter paper lots w152, w161, w162, w171 at Time 0. linear regression- blue, line of identity- red}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/demingw171.pdf}
-\caption{\label{fig:orgdf7972b}Biotinidase activity (MRU) in samples spotted onto filter paper lot W152 v W171 with Deming regression at time 0.}
+\caption{\label{fig:org4b8ccb7}Biotinidase activity (MRU) in samples spotted onto filter paper lot W152 v W171 with Deming regression at time 0.}
 \end{figure}
 \clearpage
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/spmat2.pdf}
-\caption{\label{fig:orgbda57e6}Comparison of biotinidase activity (MRU) in samples spotted simultaneously onto filter paper lots w152, w161, w162, w171 at Time 0 + 2 months. linear regression- blue, line of identity- red}
+\caption{\label{fig:orgefe16f5}Comparison of biotinidase activity (MRU) in samples spotted simultaneously onto filter paper lots w152, w161, w162, w171 at Time 0 + 2 months. linear regression- blue, line of identity- red}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figures/demingw171_2.pdf}
-\caption{\label{fig:org0537868}Biotinidase activity (MRU) in samples spotted onto filter paper lot W152 v W171 with Deming regression at time 0 + 2 months.}
+\caption{\label{fig:orgf42a5ab}Biotinidase activity (MRU) in samples spotted onto filter paper lot W152 v W171 with Deming regression at time 0 + 2 months.}
 \end{figure}
 
 \clearpage
 
 \section*{Discussion}
-\label{sec:org7e0c06a}
+\label{sec:orgbdf1daf}
 This study demonstrates that seasonal temperature and filter paper
 collection cards affect biotinidase activity. Our results are
 consistent with a previous study that used controlled experiments to
@@ -411,7 +411,7 @@ prior to release to birthing centres for use in dried blood spot
 sample collection for newborn screening.
 
 \section*{Conclusions}
-\label{sec:org5b09a07}
+\label{sec:org348736c}
 
 In Ontario, new batches of filter paper collection cards are often
 printed and issued to birthing centres once a year in early
@@ -423,7 +423,7 @@ increased seasonal temperatures and collection on newly printed filter
 cards inhibit biotindase activity.
 
 \section*{References}
-\label{sec:orgff5b226}
+\label{sec:org240e0d1}
 \begin{hangparas}{1.5em}{1}
 \hypertarget{citeproc_bib_item_1}{Adam, B. W., E. M. Hall, M. Sternberg, T. H. Lim, S. R. Flores, S. O’Brien, D. Simms, L. X. Li, V. R. De Jesus, and W. H. Hannon. 2011. “The stability of markers in dried-blood spots for recommended newborn screening disorders in the United States.” \textit{Clinical Biochemistry} 44 (17-18):1445–50. \href{https://doi.org/10.1016/j.clinbiochem.2011.09.010}{https://doi.org/10.1016/j.clinbiochem.2011.09.010}.}
 

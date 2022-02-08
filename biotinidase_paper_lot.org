@@ -31,7 +31,7 @@
 
 #+BEGIN_EXPORT LaTeX
 \begin{frontmatter}
-\title{Seasonal Temperature and Filter Paper Collection Cards Affect Biotinidase Activity}
+\title{Biotindase Activity is Affected by Both Seasonal Temperature and Filter Collection Cards.}
 \author[NSO, UoO]{Matthew P.A. Henderson\corref{cor1}}
 \ead{mhenderson@cheo.on.ca}
 \author[NSO]{Nathan McIntosh}
@@ -65,8 +65,8 @@
   that recently printed filter paper cards inhibit biotinidase and
   that this inhibition resolved over time.
 
-- Conclusions :: Increased seasonal temperatures and collection on
-  newly printed filter cards inhibit biotindase activity. 
+- Conclusions :: Biotindase activity is inhibited by both increased
+  seasonal temperature and collection on newly printed filter cards.
 
 * Keywords
 newborn screening, biotinidase deficiency, dried blood spots, filter
@@ -120,7 +120,7 @@ results in profound biotinidase deficiency. The p.D444H variant is the
 most common pathological variant observed in newborn screen positive
 infants in Ontario [cite:@Gannavarapu2015]. Compound heterozygotes for
 the p.D444H pathogenic variant and a profound biotinidase deficiency
-allele results in profound biotinidase deficiency. Individuals who are
+allele have profound biotinidase deficiency. Individuals who are
 homozygous for the p.D444H pathogenic variant are expected to have
 approximately 45-50% of mean normal serum biotinidase enzyme activity
 and do not generally require biotin therapy [cite:@Wolf2016].
@@ -241,9 +241,9 @@ positive rate for biotinidase deficiency and galactosemia increased in
 the warm summer months (Figure [[fig:biotpts]] and [[fig:galtpts]]). However,
 there was a period in early 2017 when the screen positive rate for
 biotinidase deficiency increased despite external temperatures below
-zero (Figure [[fig:biotpts]] between the blue lines). There is no
+zero (Figure [[fig:biotpts]] between the dashed blue lines). There is no
 corresponding change in the galactosemia screen positive rate during
-this time period (Figure [[fig:biotpts]] between the blue lines).
+this time period (Figure [[fig:biotpts]] between the dashed blue lines).
 
 #+begin_src R :session *R* :results values :exports none :tangle yes
   library("tidyverse")
