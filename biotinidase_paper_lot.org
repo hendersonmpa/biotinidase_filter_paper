@@ -31,7 +31,7 @@
 
 #+BEGIN_EXPORT LaTeX
 \begin{frontmatter}
-\title{Biotindase Activity is Affected by Both Seasonal Temperature and Filter Collection Cards.}
+\title{Biotinidase Activity is Affected by Both Seasonal Temperature and Filter Collection Cards.}
 \author[NSO, UoO]{Matthew P.A. Henderson\corref{cor1}}
 \ead{mhenderson@cheo.on.ca}
 \author[NSO]{Nathan McIntosh}
@@ -829,6 +829,8 @@ positive rate in 2017 and 2018. Time series analysis showed that both
 increased seasonal temperatures and collection on newly printed filter
 cards inhibit biotindase activity.
 
+* Acknowledgments
+Funding: None.
 * References
 #+print_bibliography:
 
