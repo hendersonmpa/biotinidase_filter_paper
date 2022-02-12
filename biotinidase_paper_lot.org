@@ -14,8 +14,8 @@
 #+STARTUP: noindent
 #+bibliography: Collection.bib
 #+cite_export: csl 
-#+LaTeX_HEADER: \usepackage{lineno}
-#+LaTeX_HEADER: \linenumbers
+##+LaTeX_HEADER: \usepackage{lineno}
+##+LaTeX_HEADER: \linenumbers
 #+LaTeX_HEADER: \usepackage{setspace}
 #+LaTeX_HEADER: \onehalfspacing
 #+LaTeX_HEADER: \authblk
@@ -47,26 +47,25 @@
 #+END_EXPORT
 
 * Abstract
-- Objective :: This study set out to examine pre-analytical factors
-  affecting the frequency of positive results in newborn screening for
-  biotinidase deficiency. This investigation was prompted by an
-  increase in the annual screen positive rate for biotinidase deficiency
-  in Ontario from 2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
+This study set out to examine pre-analytical factors affecting the
+frequency of positive results in newborn screening for biotinidase
+deficiency. This investigation was prompted by an increase in the
+annual screen positive rate for biotinidase deficiency in Ontario from
+2.65x10^{-4} in 2016 to 6.57x10^{-4} in 2017.
 
-- Results :: Season and trend decomposition was used to separate
-  seasonality from an underlying trend in the time series of
-  biotindase activity measurements for the period 2014-01-12 to
-  2019-07-27 (n = 798,770). This analysis revealed a marked seasonal
-  effect (winter = median + \le 17 MRU, summer = mean - \le 20 MRU)
-  and a non-linear negative trend. Seasonal temperature was correlated
-  with biotinidase results (Pearson's r = 0.79) but not with the
-  observed negative trend (Pearson's r = 0.0025). Time series analysis
-  of biotinidase results grouped by print lot of filter paper revealed
-  that recently printed filter paper cards inhibit biotinidase and
-  that this inhibition resolved over time.
-
-- Conclusions :: Biotindase activity is inhibited by both increased
-  seasonal temperature and collection on newly printed filter cards.
+Season and trend decomposition was used to separate seasonality from
+an underlying trend in the time series of biotindase activity
+measurements for the period 2014-01-12 to 2019-07-27 (n =
+798,770). This analysis revealed a marked seasonal effect (winter =
+median + \le 17 MRU, summer = mean - \le 20 MRU) and a non-linear
+negative trend. Seasonal temperature was correlated with biotinidase
+results (Pearson's r = 0.79) but not with the observed negative trend
+(Pearson's r = 0.0025). Time series analysis of biotinidase results
+grouped by print lot of filter paper revealed that recently printed
+filter paper cards inhibit biotinidase and that this inhibition
+resolved over time. This study demonstrates that biotindase activity
+is inhibited by both increased seasonal temperature and collection on
+newly printed filter cards.
 
 * Keywords
 newborn screening, biotinidase deficiency, dried blood spots, filter
