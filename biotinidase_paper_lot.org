@@ -85,14 +85,19 @@ enzyme that liberates biotin from biocytin during the normal
 proteolytic turnover of holocarboxylases and other biotinylated
 proteins. The absence of appropriate biotin recycling is associated
 with secondary alterations in amino acid, carbohydrate, and fatty acid
-metabolism (Figure [[fig:cycle]]). Neurological symptoms of biotinidase
-deficiency such as lethargy, muscular hypotonia, grand mal and
-myoclonic seizures, and ataxia may occur in the neonatal period. Many
-affected children also have skin rash, alopecia, developmental delay,
-hearing loss, conjunctivitis and visual problems including optic
-atrophy. Metabolic acidosis and the characteristic organic aciduria of
-multiple carboxylase deficiency is often absent in the early stages of
-the disease.
+metabolism. Neurological symptoms of biotinidase deficiency such as
+lethargy, muscular hypotonia, grand mal and myoclonic seizures, and
+ataxia may occur in the neonatal period. Many affected children also
+have skin rash, alopecia, developmental delay, hearing loss,
+conjunctivitis and visual problems including optic atrophy. Metabolic
+acidosis and the characteristic organic aciduria of multiple
+carboxylase deficiency is often absent in the early stages of the
+disease. Diagnosis of biotinidase deficiency is based on demonstrating
+deficient enzyme activity in serum or plasma. Patients with profound
+biotinidase deficiency have less than 10% of mean normal serum
+activity [cite:@Strovel2017]. Patients with partial biotinidase
+deficiency have 10-30% of mean normal serum activity
+[cite:@Strovel2017].
 
 The state of Virginia was the first jurisdiction to perform universal
 newborn screening for biotinidase deficiency, beginning in 1984
@@ -106,23 +111,6 @@ partial biotinidase deficiency between 1/31,000 and 1/40,000
 [cite:@Strovel2017]. A similar study conducted in Ontario found a
 combined prevalence of profound and partial biotinidase deficiency at
 a higher ratio of approximately 1 in 15,000 [cite:@Gannavarapu2015].
-
-Diagnosis of biotinidase deficiency is based on demonstrating
-deficient enzyme activity in serum or plasma. Patients with profound
-biotinidase deficiency have less than 10% of mean normal serum
-activity [cite:@Strovel2017]. Patients with partial biotinidase
-deficiency have 10-30% of mean normal serum activity
-[cite:@Strovel2017]. Most pathogenic variants in the BTD gene cause
-complete loss or near-complete loss of biotinidase enzyme activity. A
-combination of two of these profound biotinidase deficiency alleles
-results in profound biotinidase deficiency. The p.D444H variant is the
-most common pathological variant observed in newborn screen positive
-infants in Ontario [cite:@Gannavarapu2015]. Compound heterozygotes for
-the p.D444H pathogenic variant and a profound biotinidase deficiency
-allele have profound biotinidase deficiency. Individuals who are
-homozygous for the p.D444H pathogenic variant are expected to have
-approximately 45-50% of mean normal serum biotinidase enzyme activity
-and do not generally require biotin therapy [cite:@Wolf2016].
 
 While avoiding false negative newborn screening results is of
 paramount importance in newborn screening, there is recognition that
@@ -140,53 +128,6 @@ increased seasonal temperatures and collection on newly printed filter
 cards inhibits biotindase activity resulting in an increased screen
 positive rate.
 
-
-
-#+BEGIN_SRC  dot :file ./figures/cycle.pdf :cmdline -Kdot -Tpdf
-      digraph {
-	    edge [fontname="Helvetica-Bold"];
-    // substrate and product nodes
-	  node [fontname=helvetica,style=filled, color=lightgrey];
-	      diet[label= "Dietary Free\nBiotin"];
-	      free[label= "Free Biotin"];
-	      atp[label="ATP"];
-	      apo[label="Apocarboxylases"];
-	      amp[label="AMP"];
-	      hc[label="Holocarboxylases"];
-	      biocytin[label="Biocytin",shape="oval"];
-	      lysine[label="Lysine",shape="oval"];
-
-     //enzyme nodes
-	  node [shape=point, style=filled, color=black];
-	      hcs[];
-	      biotinidase[];
-	      protease;
-     // function nodes
-	   node [shape=octagon, style=filled, color=whitesmoke];
-	      functions[label="Fatty Acid Metabolism\nGluconeogenesis\nAmino Acid Metabolism"];
-
-     // connections
-	      diet -> free[label="Biotin \n transport"];
-	      free -> hcs[arrowhead="none"];
-	      atp -> hcs[arrowhead="none"];
-	      apo -> hcs[arrowhead="none"];
-	      hcs -> hc[taillabel="Holocarboxylase \n Synthetase"];
-	      hcs -> amp;
-	      hc -> functions[style="dotted"];
-	      hc -> protease[headlabel="Proteases",arrowhead="none"];
-	      protease -> biocytin;
-	      biocytin -> biotinidase[arrowhead="none"];
-	      biotinidase -> free[taillabel="Biotinidase"];
-	      biotinidase -> lysine;
-      }
-#+END_SRC
-
-#+CAPTION[]: The Biotin Cycle adapted from [cite:@Strovel2017]. Grey ovals contain substrates and products. Labelled black points represent enzymes. Metabolic functions of holocarboxylases are listed in the light grey octagon. 
-#+NAME: fig:cycle
-#+ATTR_LaTeX: :width .8\textwidth
-#+RESULTS:
-[[file:./figures/cycle.pdf]]
-
 * Material and Methods
 ** Observational Study
 A data mining approach was used to investigate the effect of
@@ -194,16 +135,38 @@ temperature and filter paper lot on the screen positive rate for
 biotinidase deficiency. The laboratory information system was queried
 for all newborn screening biotinidase activity results from the first
 phase of screening in the period 2014-01-12 to 2019-07-27 (n =
-798,770). During the study period dried blood spot biotinidase
-activity was measured on the SpotCheck Pro platform (Astoria Pacific,
-Oregon USA.). Biotinidase activity was reported in microplate response
-units (MRU). 903 filter paper was used for dried blood spot sample
-collection (EBF, South Carolina, USA).
+798,770). During the study period dried blood spot biotinidase and
+GALT activity were measured on the SpotCheck Pro platform (Astoria
+Pacific, Oregon USA.). Biotinidase activity was reported in microplate
+response units (MRU) while GALT activity was reported in units per
+gram of hemoglobin (U/g Hb). 903 filter paper was used for dried blood
+spot sample collection (EBF, South Carolina, USA).
 
 Daily mean temperature data for weather station 42183 in Barrie
-Ontario was downloaded from Environment Canada. Season and trend
+Ontario was downloaded from Environment Canada. This representative
+location in southern Ontario was chosen as the majority of annual
+births occur in southern Ontario.  A site north of the metropolitan
+area of Greater Toronto was chosen to mitigate the more extreme
+temperatures observed in this urban head island. Season and trend
 decomposition was used to separate seasonality from an underlying
 trend in the 4 year time series of biotindase activity results.
+
+Season and trend decomposition was used to identify trends in
+biotinidase activity after adjustment for seasonal effects using the
+'decompose' function in R [cite:@R2020]. The times series of weekly
+biotinidase activity data (y_t) was represented as an additive model
+(Equation \ref{eq:ts}) The non-linear trend component T_t, reflects
+the long-term progression of the series determined using a moving
+average. The seasonal contribution S_t, was computed by averaging for each
+weekly time unit for all 52 week periods. The random component r_t, was
+determined be removing the trend and seasonal components from the
+original times series y_t.
+
+#+BEGIN_EXPORT LaTeX
+\begin{equation}\label{eq:ts}
+y_t = T_t + S_t + r_t 
+\end{equation}
+#+END_EXPORT
 
 ** Experimental Study
 
@@ -234,15 +197,17 @@ enzyme activity is measured on each newborn screening sample to screen
 for galactosemia. Previous studies have shown that GALT activity is
 affected by seasonal temperature. Time series analysis was performed
 to examine trends in biotinidase and activity over the four year study
-period. As expected both biotindase and GALT activity demonstrate
-seasonal variation in measured activity, as a result the screen
-positive rate for biotinidase deficiency and galactosemia increased in
-the warm summer months (Figure [[fig:biotpts]] and [[fig:galtpts]]). However,
-there was a period in early 2017 when the screen positive rate for
-biotinidase deficiency increased despite external temperatures below
-zero (Figure [[fig:biotpts]] between the dashed blue lines). There is no
-corresponding change in the galactosemia screen positive rate during
-this time period (Figure [[fig:biotpts]] between the dashed blue lines).
+period. Both biotindase and GALT activity demonstrate seasonal
+variation in measured activity, as a result the screen positive rate
+for biotinidase deficiency and galactosemia increased in the warm
+summer months (Figure [[fig:biotpts]] and [[fig:galtpts]]). Environmental
+temperature is included in the bottom panel of these figures to
+illustrate seasonal temperature trends in Ontario. There is a period
+in early 2017 when the screen positive rate for biotinidase deficiency
+began to increased despite low environmental temperature (Figure
+[[fig:biotpts]] between the dashed blue lines). There is no corresponding
+change in the galactosemia screen positive rate during this time
+period (Figures [[fig:biotgaltpos]] between the dashed blue lines).
 
 #+begin_src R :session *R* :results values :exports none :tangle yes
   library("tidyverse")
@@ -467,7 +432,7 @@ year & n & median & pos & rate \\
 
 #+begin_src R :session *R* :results output :exports results :tangle yes
   weather <- read.csv("./data/weather/temp.csv", header = FALSE)
-  dates <- as.Date(c("2017-01-01","2017-08-31"))
+  dates <- as.Date(c("2017-02-01","2017-07-31"))
   labels <- c("","")
   events <- xts(labels, dates)
 
@@ -478,7 +443,7 @@ year & n & median & pos & rate \\
 		    median = median(result, na.rm = TRUE),
 		    mean = median(result, na.rm = TRUE),
 		    pos = length(result_code[result_code == "BIOT-C-01-012"])) %>%
-	  filter(week >= "2014-01-12") ## start of Spotcheck Pro results
+	  filter(week >= "2014-01-12" & week <= "2019-07-21") ## start of Spotcheck Pro results
 
   tempweek <- weather %>%
     select(date= 5, dailymean = 14) %>%
@@ -491,14 +456,17 @@ year & n & median & pos & rate \\
  #+RESULTS:
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/biotpts.pdf :exports results  :tangle yes
-  biotcombined <- cbind(biotweek$pos, biotweek$median, tempweek$temp)
-  biotcombinedts <- xts(biotcombined, biotweek$week)
-  plot(biotcombinedts, col = c("firebrick","steelblue4", "gold2"),
+    biotcombined <- cbind(biotweek$pos, biotweek$median, tempweek$temp)
+    biotcombinedts <- xts(biotcombined, biotweek$week)
+    plot(biotcombinedts, col = c("firebrick","steelblue4", "gold2"),
 	 multi.panel = TRUE, 
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
+	 format.labels = "%b-%Y",
+	 ylab = "C                           weekly activity                                   count",
 	 main = "Biotinidase")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
+
   addLegend(legend.loc = "topright",
 	    legend.names = c("screen positive", "median activity", "temperature (C)"),
 	    col = c("firebrick","steelblue4", "gold2"),
@@ -519,7 +487,7 @@ year & n & median & pos & rate \\
 		median = median(result, na.rm = TRUE),
 		mean = median(result, na.rm = TRUE),
 		pos = length(result_code[result_code == "GALT-C-01-012"])) %>%
-      filter(week >= "2014-01-12") ## start of Spotcheck Pro results
+      filter(week >= "2014-01-12" & week <= "2019-07-21") ## start of Spotcheck Pro results
 
     galtcombined <- cbind(galtweek$pos, galtweek$median, tempweek$temp)
     galtcombinedts <- xts(galtcombined, galtweek$week)
@@ -527,6 +495,8 @@ year & n & median & pos & rate \\
 	 multi.panel = TRUE, 
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
+	 format.labels = "%b-%Y",
+	 ylab = "C                             weekly activity                           count",
 	 main = "GALT")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
   addLegend(legend.loc = "topright",
@@ -537,11 +507,40 @@ year & n & median & pos & rate \\
 
 #+end_src
 
-#+CAPTION[]: Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C).  Dashed blue lines flank a period with an elevated screen positive rate. 
+#+CAPTION[]: Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C).  Dashed blue lines flank a period with an elevated biotinidase deficiency screen positive rate. 
 #+NAME: fig:galtpts
 #+ATTR_LaTeX: :width \textwidth
 #+RESULTS:
 [[file:./figures/galtpts.pdf]]
+
+
+#+begin_src R :session *R* :results output graphics file :file ./figures/biotgaltpos.pdf :exports results :tangle yes
+  biotgaltcombined <- cbind(biotweek$pos, galtweek$pos)
+  biotgaltcombinedts <- xts(biotgaltcombined, biotweek$week)
+
+  plot(biotgaltcombinedts, col = c("firebrick","steelblue4"),
+       multi.panel = TRUE,
+       yaxis.same = FALSE, 
+       yaxis.right = FALSE,
+       format.labels = "%b-%Y",
+       ylab = "count",
+       main = "")
+  addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
+  addEventLines(events, srt = 90, pos = 2, on = 2, col = "blue", lty = "dashed")
+  addLegend(legend.loc = "topright",
+	    legend.names = c("Biotinidase", "GALT"),
+	    col = c("firebrick","steelblue4"),
+	    lty = c("solid","solid"),
+	    on = 1)
+
+#+end_src
+
+#+CAPTION[]: Time series of weekly screen positive biotinidase and galactosemia referrals.  Dashed blue lines flank a period with an elevated biotinidase deficiency screen positive rate. 
+#+NAME: fig:biotgaltpos
+#+ATTR_LaTeX: :width \textwidth
+#+RESULTS:
+[[file:./figures/biotgaltpos.pdf]]
+
 
 \clearpage
 
@@ -565,6 +564,8 @@ the observed negative trend (Pearson's r = 0.025).
   biotdts <- xts(biotdecomp, biotweek$week)
   plot(biotdts, col = c("steelblue4", "firebrick", "gold2", "grey50"),
        yaxis.right = FALSE,
+       format.labels = "%b-%Y",
+       ylab = "weekly activity",
        main = "")
   addLegend(legend.loc = "right",
 	    legend.names = c("median", "trend", "seasonal", "random"),
@@ -622,7 +623,8 @@ this card lot was most pronounced and took over 5 months to resolve
        multi.panel = FALSE,
        yaxis.right = FALSE,
        main = "",
-       ylab = "Median Weekly Biotinidase Activity")
+       format.labels = "%b-%Y",
+       ylab = "weekly activity")
 
 					  #July 2014 B6978414 W121
 					  #July 2015 B7012515 W141
@@ -656,7 +658,7 @@ this card lot was most pronounced and took over 5 months to resolve
 	      "Median W161" = median(W161),
 	      "Difference" = `Median W161` - `Median`,
 	      "% Difference" = (`Median W161` - `Median`) / `Median` * 100) %>%
-    xtable(caption = "Median Activity for Filter Card Lot W161",
+    xtable(caption = "Median Biotinidase Activity for the Population (Median) and Filter Card Lot W161 (Median W161)",
 	   label = "tab:w161_months", digits = 1, display = c("s", "s","f","f","f","f")) %>%
     print(include.rownames = FALSE)
 #+end_src
@@ -664,14 +666,14 @@ this card lot was most pronounced and took over 5 months to resolve
 #+RESULTS:
 #+begin_export latex
 % latex table generated in R 4.0.3 by xtable 1.8-4 package
-% Fri Dec 17 14:55:05 2021
+% Fri Mar 18 13:25:07 2022
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrr}
   \hline
-  Month & Median & Median W161 & Difference & \% Difference \\ 
+Month & Median & Median W161 & Difference & \% Difference \\ 
   \hline
-  February & 137.3 & 57.6 & -79.8 & -58.1 \\ 
+February & 137.3 & 57.6 & -79.8 & -58.1 \\ 
   March & 145.2 & 63.8 & -81.4 & -56.1 \\ 
   April & 135.4 & 69.7 & -65.7 & -48.5 \\ 
   May & 128.2 & 74.8 & -53.3 & -41.6 \\ 
@@ -684,7 +686,7 @@ this card lot was most pronounced and took over 5 months to resolve
   December & 132.3 & 135.7 & 3.3 & 2.5 \\ 
    \hline
 \end{tabular}
-\caption{Median Activity for All Samples and Filter Card Lot W161} 
+\caption{Median Biotinidase Activity for the Population (Median) and Filter Card Lot W161 (Median W161)} 
 \label{tab:w161_months}
 \end{table}
 #+end_export
@@ -706,9 +708,9 @@ resolved after two months of storage in the laboratory (Figure
   comp <- read_excel("./data/BIO Filter paper Study Data_Sept 2017.xls", sheet = 7)
   pairs(~w152+w161+w162+w171, data=comp,
 	panel=function(x,y) {
-	    points(x,y)
-	    abline(lm(y~x), lty="dashed", col="blue")
-	    abline(a = 0, b = 1, col = "red")
+	  points(x,y)
+	  abline(lm(y~x), lty="dashed", col="blue")
+	  abline(a = 0, b = 1, col = "red")
 	},
 	main="")
 #+end_src
