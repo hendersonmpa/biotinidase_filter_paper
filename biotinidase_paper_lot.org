@@ -206,7 +206,7 @@ in Ontario. There is a period in early 2017 when the screen positive
 rate for biotinidase deficiency began to increased despite low
 environmental temperature (Figure [[fig:biotpts]] first panel between the
 dashed blue lines). There is no corresponding change in the
-galactosemia screen positive rate during this time period (Figures
+galactosemia screen positive rate during this time period (Figure
 [[fig:biotpts]] second panel between the dashed blue lines).
 
 #+begin_src R :session *R* :results values :exports none :tangle yes
@@ -471,7 +471,7 @@ year & n & median & pos & rate \\
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
 	 format.labels = "%b-%Y",
-	 ylab = "C                           weekly activity                                   count",
+	 ylab = "C                         activity                         count                           count",
 	 main = "")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
   addEventLines(events, srt = 90, pos = 2, on = 2, col = "blue", lty = "dashed")
