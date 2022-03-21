@@ -200,14 +200,14 @@ to examine trends in biotinidase and activity over the four year study
 period. Both biotindase and GALT activity demonstrate seasonal
 variation in measured activity, as a result the screen positive rate
 for biotinidase deficiency and galactosemia increased in the warm
-summer months (Figure [[fig:biotpts]] and [[fig:galtpts]]). Environmental
-temperature is included in the bottom panel of these figures to
-illustrate seasonal temperature trends in Ontario. There is a period
-in early 2017 when the screen positive rate for biotinidase deficiency
-began to increased despite low environmental temperature (Figure
-[[fig:biotpts]] between the dashed blue lines). There is no corresponding
-change in the galactosemia screen positive rate during this time
-period (Figures [[fig:biotgaltpos]] between the dashed blue lines).
+summer months (Figure [[fig:biotpts]]). Environmental temperature is
+included in the bottom panel to illustrate seasonal temperature trends
+in Ontario. There is a period in early 2017 when the screen positive
+rate for biotinidase deficiency began to increased despite low
+environmental temperature (Figure [[fig:biotpts]] first panel between the
+dashed blue lines). There is no corresponding change in the
+galactosemia screen positive rate during this time period (Figures
+[[fig:biotpts]] second panel between the dashed blue lines).
 
 #+begin_src R :session *R* :results values :exports none :tangle yes
   library("tidyverse")
@@ -445,6 +445,14 @@ year & n & median & pos & rate \\
 		    pos = length(result_code[result_code == "BIOT-C-01-012"])) %>%
 	  filter(week >= "2014-01-12" & week <= "2019-07-21") ## start of Spotcheck Pro results
 
+  galtweek <- galtdata %>%
+    group_by(week = date(floor_date(measured_time, unit = "week"))) %>%
+    summarise(n = n(),
+	      median = median(result, na.rm = TRUE),
+	      mean = median(result, na.rm = TRUE),
+	      pos = length(result_code[result_code == "GALT-C-01-012"])) %>%
+    filter(week >= "2014-01-12" & week <= "2019-07-21") ## start of Spotcheck Pro results
+
   tempweek <- weather %>%
     select(date= 5, dailymean = 14) %>%
     group_by(week = floor_date(date(date), unit = "week")) %>%
@@ -456,90 +464,29 @@ year & n & median & pos & rate \\
  #+RESULTS:
 
 #+begin_src R :session *R* :results output graphics file :file ./figures/biotpts.pdf :exports results  :tangle yes
-    biotcombined <- cbind(biotweek$pos, biotweek$median, tempweek$temp)
+    biotcombined <- cbind(biotweek$pos, galtweek$pos, biotweek$median, tempweek$temp)
     biotcombinedts <- xts(biotcombined, biotweek$week)
-    plot(biotcombinedts, col = c("firebrick","steelblue4", "gold2"),
+    plot(biotcombinedts, col = c("firebrick","orange1", "steelblue4", "gold2"),
 	 multi.panel = TRUE, 
 	 yaxis.same = FALSE, 
 	 yaxis.right = FALSE,
 	 format.labels = "%b-%Y",
 	 ylab = "C                           weekly activity                                   count",
-	 main = "Biotinidase")
+	 main = "")
   addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
-
-  addLegend(legend.loc = "topright",
-	    legend.names = c("screen positive", "median activity", "temperature (C)"),
-	    col = c("firebrick","steelblue4", "gold2"),
-	    lty = c("solid","solid", "solid"),
+  addEventLines(events, srt = 90, pos = 2, on = 2, col = "blue", lty = "dashed")
+  addLegend(legend.loc = "topleft",
+	    legend.names = c("Biotinidase screen positive", "GALT screen positive", "Median biotinidase activity", "Temperature (C)"),
+	    col = c("firebrick", "orange1", "steelblue4", "gold2"),
+	    lty = c("solid", "solid", "solid", "solid"),
 	    on = 1)
 #+end_src
 
-#+CAPTION[]: Time series of weekly screen positive biotinidase deficiency referrals, median weekly biotinidase activity and mean weekly temperature (\degree{}C). Dashed blue lines flank a period with an elevated screen positive rate. 
+#+CAPTION[]: Time series of weekly screen positive biotinidase deficiency referrals, weekly positive galactosemia screen positive referrals, median weekly biotinidase activity and mean weekly temperature (\degree{}C). Dashed blue lines flank a period with an elevated screen positive rate. 
 #+NAME: fig:biotpts
 #+ATTR_LaTeX: :width \textwidth
 #+RESULTS:
 [[file:./figures/biotpts.pdf]]
-
-#+begin_src R :session *R* :results output graphics file :file ./figures/galtpts.pdf :exports results :tangle yes
-  galtweek <- galtdata %>%
-    group_by(week = date(floor_date(measured_time, unit = "week"))) %>%
-      summarise(n = n(),
-		median = median(result, na.rm = TRUE),
-		mean = median(result, na.rm = TRUE),
-		pos = length(result_code[result_code == "GALT-C-01-012"])) %>%
-      filter(week >= "2014-01-12" & week <= "2019-07-21") ## start of Spotcheck Pro results
-
-    galtcombined <- cbind(galtweek$pos, galtweek$median, tempweek$temp)
-    galtcombinedts <- xts(galtcombined, galtweek$week)
-    plot(galtcombinedts, col = c("firebrick","steelblue4", "gold2"),
-	 multi.panel = TRUE, 
-	 yaxis.same = FALSE, 
-	 yaxis.right = FALSE,
-	 format.labels = "%b-%Y",
-	 ylab = "C                             weekly activity                           count",
-	 main = "GALT")
-  addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
-  addLegend(legend.loc = "topright",
-	    legend.names = c("screen positive", "median activity", "temperature (C)"),
-	    col = c("firebrick","steelblue4", "gold2"),
-	    lty = c("solid","solid", "solid"),
-	    on = 1)
-
-#+end_src
-
-#+CAPTION[]: Time series of weekly screen positive galactosemia referrals, median weekly GALT activity and mean weekly temperature (\degree{}C).  Dashed blue lines flank a period with an elevated biotinidase deficiency screen positive rate. 
-#+NAME: fig:galtpts
-#+ATTR_LaTeX: :width \textwidth
-#+RESULTS:
-[[file:./figures/galtpts.pdf]]
-
-
-#+begin_src R :session *R* :results output graphics file :file ./figures/biotgaltpos.pdf :exports results :tangle yes
-  biotgaltcombined <- cbind(biotweek$pos, galtweek$pos)
-  biotgaltcombinedts <- xts(biotgaltcombined, biotweek$week)
-
-  plot(biotgaltcombinedts, col = c("firebrick","steelblue4"),
-       multi.panel = TRUE,
-       yaxis.same = FALSE, 
-       yaxis.right = FALSE,
-       format.labels = "%b-%Y",
-       ylab = "count",
-       main = "")
-  addEventLines(events, srt = 90, pos = 2, on = 1, col = "blue", lty = "dashed")
-  addEventLines(events, srt = 90, pos = 2, on = 2, col = "blue", lty = "dashed")
-  addLegend(legend.loc = "topright",
-	    legend.names = c("Biotinidase", "GALT"),
-	    col = c("firebrick","steelblue4"),
-	    lty = c("solid","solid"),
-	    on = 1)
-
-#+end_src
-
-#+CAPTION[]: Time series of weekly screen positive biotinidase and galactosemia referrals.  Dashed blue lines flank a period with an elevated biotinidase deficiency screen positive rate. 
-#+NAME: fig:biotgaltpos
-#+ATTR_LaTeX: :width \textwidth
-#+RESULTS:
-[[file:./figures/biotgaltpos.pdf]]
 
 
 \clearpage
